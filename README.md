@@ -156,7 +156,7 @@ The Appointment List component displays a list of upcoming and past appointments
 </p>
 
 ### Appointment Search
-The Appointment Search component allows users to search for appointments based on various criteria, such as date, time, and participant.
+The Appointment Search component allows users to search for appointments based on various criteria doctor and status.
 <p align="center">
   <img src="docs/images/appointment-search-placeholder.PNG" alt="Appointment Search Placeholder" />
 </p>
