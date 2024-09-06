@@ -1,0 +1,24 @@
+<div class="session-progress-tracker">
+    <h3>Session Progress Tracker</h3>
+    <ul>
+      <li *ngFor="let session of sessions; let i = index">
+        <strong>{{ session.date }}:</strong>
+        <div>Progress: {{ session.progress }}%</div>
+        <div>Notes: {{ session.notes }}</div>
+        <button (click)="removeSession(i)">Remove</button>
+      </li>
+    </ul>
+    <div class="add-session">
+      <h4>Add New Session</h4>
+      <label for="date">Date:</label>
+      <input id="date" type="date" [(ngModel)]="newSession.date" required />
+      
+      <label for="progress">Progress (%):</label>
+      <input id="progress" type="number" [(ngModel)]="newSession.progress" min="0" max="100" required />
+      
+      <label for="notes">Notes:</label>
+      <textarea id="notes" [(ngModel)]="newSession.notes" placeholder="Add notes here..." required></textarea>
+      
+      <button (click)="addSession()">Add Session</button>
+    </div>
+  </div>

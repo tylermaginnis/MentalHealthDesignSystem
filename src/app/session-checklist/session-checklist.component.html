@@ -1,0 +1,14 @@
+<div class="session-checklist">
+    <h3>Session Checklist</h3>
+    <ul>
+      <li *ngFor="let item of checklist; let i = index">
+        <input type="checkbox" [(ngModel)]="item.completed" (change)="toggleItemCompletion(i)" />
+        <span [class.completed]="item.completed">{{ item.item }}</span>
+        <button (click)="removeItem(i)">Remove</button>
+      </li>
+    </ul>
+    <div class="add-item">
+      <input type="text" [(ngModel)]="newItem" placeholder="Add a new item" />
+      <button (click)="addItem()">Add Item</button>
+    </div>
+  </div>

@@ -1,0 +1,14 @@
+<div class="session-goals">
+    <h3>Therapy Goals</h3>
+    <ul>
+      <li *ngFor="let goal of goals; let i = index">
+        <input type="checkbox" [(ngModel)]="goal.completed" (change)="toggleGoalCompletion(i)" />
+        <span [class.completed]="goal.completed">{{ goal.description }}</span>
+        <button (click)="removeGoal(i)">Remove</button>
+      </li>
+    </ul>
+    <div class="add-goal">
+      <input type="text" [(ngModel)]="newGoalDescription" placeholder="Add a new goal" />
+      <button (click)="addGoal()">Add Goal</button>
+    </div>
+  </div>

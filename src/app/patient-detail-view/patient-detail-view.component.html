@@ -12,9 +12,12 @@
             <h3>Appointments</h3>
         </div>
         <div class="tab-content appointments" [ngClass]="{'expanded': isSectionExpanded('appointments')}">
-            <button class="toggle-view-btn" (click)="toggleAppointmentView()">
-                {{ isCalendarView ? 'Switch to List View' : 'Switch to Calendar View' }}
-            </button>
+            <div class="button-group">
+                <button class="btn btn-primary" (click)="openSchedulerModal()">Schedule Appointment</button>
+                <button class="toggle-view-btn btn btn-secondary" (click)="toggleAppointmentView()">
+                    {{ isCalendarView ? 'Switch to List View' : 'Switch to Calendar View' }}
+                </button>
+            </div>            
             <app-appointment-list *ngIf="isSectionExpanded('appointments') && !isCalendarView" [appointments]="appointments_list"></app-appointment-list>
             <app-appointment-calendar *ngIf="isSectionExpanded('appointments') && isCalendarView" [appointments_calendar]="appointments_calendar"></app-appointment-calendar>
         </div>
@@ -31,7 +34,13 @@
         <div class="tab-content allergies" [ngClass]="{'expanded': isSectionExpanded('allergies')}">
             <app-patient-allergy-list *ngIf="isSectionExpanded('allergies')" [allergies]="allergies"></app-patient-allergy-list>
         </div>
+    </div>
 
-
+    <!-- Modal for Appointment Scheduler -->
+    <div class="modal" [ngClass]="{'show': isSchedulerModalOpen}">
+        <div class="modal-content">
+            <span class="close" (click)="closeSchedulerModal()">&times;</span>
+            <app-appointment-scheduler></app-appointment-scheduler>
+        </div>
     </div>
 </div>

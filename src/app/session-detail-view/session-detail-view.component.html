@@ -1,0 +1,79 @@
+<div class="session-detail-view" role="region" aria-labelledby="session-detail-heading">
+    <h2 id="session-detail-heading">Session Detail View</h2>
+    <div class="session-details">
+
+    </div>
+  
+    <!-- Sectional Tabs -->
+    <div class="tabs">
+      <div class="tab" (click)="toggleSection('summary')">
+        <h3>Summary</h3>
+      </div>
+      <div class="tab-content summary" [ngClass]="{'expanded': isSectionExpanded('summary')}">
+        <app-session-summary *ngIf="isSectionExpanded('summary')"></app-session-summary>
+      </div>
+  
+      <div class="tab" (click)="toggleSection('goals')">
+        <h3>Goals</h3>
+      </div>
+      <div class="tab-content goals" [ngClass]="{'expanded': isSectionExpanded('goals')}">
+        <app-session-goals *ngIf="isSectionExpanded('goals')"></app-session-goals>
+      </div>
+  
+      <div class="tab" (click)="toggleSection('progressTracker')">
+        <h3>Progress Tracker</h3>
+      </div>
+      <div class="tab-content progressTracker" [ngClass]="{'expanded': isSectionExpanded('progressTracker')}">
+        <app-session-progress-tracker *ngIf="isSectionExpanded('progressTracker')"></app-session-progress-tracker>
+      </div>
+  
+      <div class="tab" (click)="toggleSection('history')">
+        <h3>History</h3>
+      </div>
+      <div class="tab-content history" [ngClass]="{'expanded': isSectionExpanded('history')}">
+        <app-session-history *ngIf="isSectionExpanded('history')"></app-session-history>
+      </div>
+  
+      <div class="tab" (click)="toggleSection('notes')">
+        <h3>Notes</h3>
+      </div>
+      <div class="tab-content notes" [ngClass]="{'expanded': isSectionExpanded('notes')}">
+        <app-session-notes *ngIf="isSectionExpanded('notes')"></app-session-notes>
+      </div>
+  
+      <div class="tab" (click)="toggleSection('checklist')">
+        <h3>Checklist</h3>
+      </div>
+      <div class="tab-content checklist" [ngClass]="{'expanded': isSectionExpanded('checklist')}">
+        <app-session-checklist *ngIf="isSectionExpanded('checklist')"></app-session-checklist>
+      </div>
+  
+      <div class="tab" (click)="toggleSection('resources')">
+        <h3>Resources</h3>
+      </div>
+      <div class="tab-content resources" [ngClass]="{'expanded': isSectionExpanded('resources')}">
+        <app-session-resources *ngIf="isSectionExpanded('resources')"></app-session-resources>
+      </div>
+  
+      <div class="tab" (click)="toggleSection('feedbackForm')">
+        <h3>Feedback Form</h3>
+      </div>
+      <div class="tab-content feedbackForm" [ngClass]="{'expanded': isSectionExpanded('feedbackForm')}">
+        <app-session-feedback-form *ngIf="isSectionExpanded('feedbackForm')"></app-session-feedback-form>
+      </div>
+  
+      <div class="tab" (click)="toggleSection('recording')">
+        <h3>Recording</h3>
+      </div>
+      <div class="tab-content recording" [ngClass]="{'expanded': isSectionExpanded('recording')}">
+        <app-session-recording *ngIf="isSectionExpanded('recording')"></app-session-recording>
+      </div>
+  
+      <div class="tab" (click)="toggleSection('timer')">
+        <h3>Timer</h3>
+      </div>
+      <div class="tab-content timer" [ngClass]="{'expanded': isSectionExpanded('timer')}">
+        <app-session-timer *ngIf="isSectionExpanded('timer')"></app-session-timer>
+      </div>
+    </div>
+  </div>

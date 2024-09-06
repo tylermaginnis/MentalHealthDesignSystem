@@ -1,0 +1,15 @@
+<div class="session-feedback-form">
+    <h3>Session Feedback</h3>
+    <form (ngSubmit)="submitFeedback()">
+      <label for="rating">Rating:</label>
+      <select id="rating" [(ngModel)]="feedback.rating" name="rating" required>
+        <option value="0" disabled>Select a rating</option>
+        <option *ngFor="let rating of [1, 2, 3, 4, 5]" [value]="rating">{{ rating }}</option>
+      </select>
+  
+      <label for="comments">Comments:</label>
+      <textarea id="comments" [(ngModel)]="feedback.comments" name="comments" placeholder="Write your comments here..." required></textarea>
+  
+      <button type="submit">Submit Feedback</button>
+    </form>
+  </div>

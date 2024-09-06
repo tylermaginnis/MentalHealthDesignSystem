@@ -1,0 +1,15 @@
+<div class="session-history">
+    <h3>Session History</h3>
+    <ul>
+      <li *ngFor="let session of sessions; let i = index">
+        <strong>{{ session.date }}:</strong>
+        <p>{{ session.summary }}</p>
+        <button (click)="removeSession(i)">Remove</button>
+      </li>
+    </ul>
+    <div class="add-session">
+      <input type="date" [(ngModel)]="newSession.date" placeholder="Session date" />
+      <textarea [(ngModel)]="newSession.summary" placeholder="Session summary"></textarea>
+      <button (click)="addSession()">Add Session</button>
+    </div>
+  </div>

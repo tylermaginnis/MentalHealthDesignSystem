@@ -1,0 +1,27 @@
+<div class="appointment-scheduler">
+    <h2>Schedule a New Appointment</h2>
+    <form (ngSubmit)="scheduleAppointment()">
+      <label for="date">Date:</label>
+      <input id="date" type="date" [(ngModel)]="appointment.date" name="date" required />
+  
+      <label for="time">Time:</label>
+      <input id="time" type="time" [(ngModel)]="appointment.time" name="time" required />
+  
+      <label for="doctor">Doctor:</label>
+      <input id="doctor" type="text" [(ngModel)]="appointment.doctor" name="doctor" required />
+  
+      <label for="location">Location:</label>
+      <input id="location" type="text" [(ngModel)]="appointment.location" name="location" required />
+  
+      <label for="notes">Notes:</label>
+      <textarea id="notes" [(ngModel)]="appointment.notes" name="notes"></textarea>
+  
+      <label for="type">Type:</label>
+      <select id="type" [(ngModel)]="appointment.type" name="type" required>
+        <option value="Therapy">Therapy</option>
+        <option value="Consultation">Consultation</option>
+      </select>
+  
+      <button type="submit" class="btn btn-primary">Schedule Appointment</button>
+    </form>
+  </div>

@@ -1,0 +1,16 @@
+<div class="session-recording">
+    <h3>Session Recording</h3>
+    <button (click)="isRecording ? stopRecording() : startRecording()">
+      {{ isRecording ? 'Stop Recording' : 'Start Recording' }}
+    </button>
+    <ul>
+      <li *ngFor="let recording of recordings">
+        <span>{{ recording.name }}</span>
+        <button (click)="playRecording(recording)">Play</button>
+      </li>
+    </ul>
+    <audio *ngIf="currentRecording" controls>
+      <source [src]="currentRecording" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  </div>

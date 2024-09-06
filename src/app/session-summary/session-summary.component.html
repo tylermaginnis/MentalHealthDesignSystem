@@ -1,0 +1,17 @@
+<div class="session-summary">
+    <h3>Session Summary</h3>
+    <p><strong>Date:</strong> {{ sessionDate }}</p>
+    <p><strong>Therapist:</strong> {{ therapist }}</p>
+    <textarea [(ngModel)]="summary" placeholder="Write a summary of the session..."></textarea>
+    <div class="goals">
+      <h4>Goals</h4>
+      <ul>
+        <li *ngFor="let goal of goals; let i = index">
+          {{ goal }}
+          <button (click)="removeGoal(i)">Remove</button>
+        </li>
+      </ul>
+      <input type="text" [(ngModel)]="newGoal" placeholder="Add a new goal" />
+      <button (click)="addGoal()">Add Goal</button>
+    </div>
+  </div>

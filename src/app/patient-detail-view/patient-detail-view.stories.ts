@@ -9,6 +9,7 @@ import { PatientAllergyListComponent } from '../patient-allergy-list/patient-all
 import { AppointmentListComponent } from '../appointment-list/appointment-list.component';
 import { AppointmentCardComponent } from '../appointment-card/appointment-card.component';
 import { AppointmentCalendarComponent } from '../appointment-calendar/appointment-calendar.component';
+import { AppointmentSchedulerComponent } from '../appointment-scheduler/appointment-scheduler.component';
 
 export default {
   title: 'Patient Clinical UI/PatientDetailView',
@@ -23,7 +24,8 @@ export default {
         PatientAllergyListComponent,
         AppointmentListComponent,
         AppointmentCardComponent,
-        AppointmentCalendarComponent
+        AppointmentCalendarComponent,
+        AppointmentSchedulerComponent
       ],
       imports: [CommonModule, FormsModule],
     }),

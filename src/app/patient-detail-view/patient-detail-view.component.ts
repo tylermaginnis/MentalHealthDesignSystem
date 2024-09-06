@@ -1,4 +1,5 @@
 import { Component, ElementRef, Renderer2, Input } from '@angular/core';
+
 @Component({
   selector: 'app-patient-detail-view',
   templateUrl: './patient-detail-view.component.html',
@@ -68,6 +69,8 @@ export class PatientDetailViewComponent {
       }
     }, 0);
   }
+
+
   isSectionExpanded(section: string): boolean {
     return this.expandedSections[section];
   }
@@ -82,5 +85,16 @@ export class PatientDetailViewComponent {
   // Method to toggle the view
   toggleAppointmentView() {
     this.isCalendarView = !this.isCalendarView;
+  }
+
+  // New properties and methods for the modal
+  isSchedulerModalOpen: boolean = false;
+
+  openSchedulerModal() {
+    this.isSchedulerModalOpen = true;
+  }
+
+  closeSchedulerModal() {
+    this.isSchedulerModalOpen = false;
   }
 }

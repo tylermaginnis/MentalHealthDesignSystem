@@ -1,0 +1,14 @@
+<div class="session-resources">
+    <h3>Session Resources</h3>
+    <ul>
+      <li *ngFor="let resource of resources; let i = index">
+        <a [href]="resource.url" target="_blank">{{ resource.name }}</a>
+        <button (click)="removeResource(i)">Remove</button>
+      </li>
+    </ul>
+    <div class="add-resource">
+      <input type="text" [(ngModel)]="newResource.name" placeholder="Resource name" />
+      <input type="text" [(ngModel)]="newResource.url" placeholder="Resource URL" />
+      <button (click)="addResource()">Add Resource</button>
+    </div>
+  </div>
