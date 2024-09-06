@@ -8,8 +8,7 @@ export default {
   component: SessionNotesComponent,
   decorators: [
     moduleMetadata({
-      declarations: [SessionNotesComponent],
-      imports: [CommonModule, FormsModule],
+      imports: [CommonModule, FormsModule, SessionNotesComponent],
     }),
   ],
 } as Meta<SessionNotesComponent>;
