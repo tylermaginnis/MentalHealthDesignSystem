@@ -132,7 +132,7 @@ The Session Timer component helps to manage the time allocated for the session, 
 ### Putting it All Together - Session Detail View
 The Session Detail View combines all the individual components into a comprehensive view of the session's information.
 <p align="center">
-  <img src="docs/images/patient-detail-view-placeholder.PNG" alt="Session Detail View Placeholder" />
+  <img src="docs/images/session-detail-view-placeholder.PNG" alt="Session Detail View Placeholder" />
 </p>
 
 ## Appointment UI Components
