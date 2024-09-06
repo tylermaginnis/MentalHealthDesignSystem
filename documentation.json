@@ -86,6 +86,552 @@
             "templateData": "<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->\r\n<!-- * * * * * * * to get started with your project! * * * * * * * -->\r\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n\r\n<style>\r\n  :host {\r\n    --bright-blue: oklch(51.01% 0.274 263.83);\r\n    --electric-violet: oklch(53.18% 0.28 296.97);\r\n    --french-violet: oklch(47.66% 0.246 305.88);\r\n    --vivid-pink: oklch(69.02% 0.277 332.77);\r\n    --hot-red: oklch(61.42% 0.238 15.34);\r\n    --orange-red: oklch(63.32% 0.24 31.68);\r\n\r\n    --gray-900: oklch(19.37% 0.006 300.98);\r\n    --gray-700: oklch(36.98% 0.014 302.71);\r\n    --gray-400: oklch(70.9% 0.015 304.04);\r\n\r\n    --red-to-pink-to-purple-vertical-gradient: linear-gradient(\r\n      180deg,\r\n      var(--orange-red) 0%,\r\n      var(--vivid-pink) 50%,\r\n      var(--electric-violet) 100%\r\n    );\r\n\r\n    --red-to-pink-to-purple-horizontal-gradient: linear-gradient(\r\n      90deg,\r\n      var(--orange-red) 0%,\r\n      var(--vivid-pink) 50%,\r\n      var(--electric-violet) 100%\r\n    );\r\n\r\n    --pill-accent: var(--bright-blue);\r\n\r\n    font-family: \"Inter\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\r\n      Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\",\r\n      \"Segoe UI Symbol\";\r\n    box-sizing: border-box;\r\n    -webkit-font-smoothing: antialiased;\r\n    -moz-osx-font-smoothing: grayscale;\r\n  }\r\n\r\n  h1 {\r\n    font-size: 3.125rem;\r\n    color: var(--gray-900);\r\n    font-weight: 500;\r\n    line-height: 100%;\r\n    letter-spacing: -0.125rem;\r\n    margin: 0;\r\n    font-family: \"Inter Tight\", -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto,\r\n      Helvetica, Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\",\r\n      \"Segoe UI Symbol\";\r\n  }\r\n\r\n  p {\r\n    margin: 0;\r\n    color: var(--gray-700);\r\n  }\r\n\r\n  main {\r\n    width: 100%;\r\n    min-height: 100%;\r\n    display: flex;\r\n    justify-content: center;\r\n    align-items: center;\r\n    padding: 1rem;\r\n    box-sizing: inherit;\r\n    position: relative;\r\n  }\r\n\r\n  .angular-logo {\r\n    max-width: 9.2rem;\r\n  }\r\n\r\n  .content {\r\n    display: flex;\r\n    justify-content: space-around;\r\n    width: 100%;\r\n    max-width: 700px;\r\n    margin-bottom: 3rem;\r\n  }\r\n\r\n  .content h1 {\r\n    margin-top: 1.75rem;\r\n  }\r\n\r\n  .content p {\r\n    margin-top: 1.5rem;\r\n  }\r\n\r\n  .divider {\r\n    width: 1px;\r\n    background: var(--red-to-pink-to-purple-vertical-gradient);\r\n    margin-inline: 0.5rem;\r\n  }\r\n\r\n  .pill-group {\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: start;\r\n    flex-wrap: wrap;\r\n    gap: 1.25rem;\r\n  }\r\n\r\n  .pill {\r\n    display: flex;\r\n    align-items: center;\r\n    --pill-accent: var(--bright-blue);\r\n    background: color-mix(in srgb, var(--pill-accent) 5%, transparent);\r\n    color: var(--pill-accent);\r\n    padding-inline: 0.75rem;\r\n    padding-block: 0.375rem;\r\n    border-radius: 2.75rem;\r\n    border: 0;\r\n    transition: background 0.3s ease;\r\n    font-family: var(--inter-font);\r\n    font-size: 0.875rem;\r\n    font-style: normal;\r\n    font-weight: 500;\r\n    line-height: 1.4rem;\r\n    letter-spacing: -0.00875rem;\r\n    text-decoration: none;\r\n  }\r\n\r\n  .pill:hover {\r\n    background: color-mix(in srgb, var(--pill-accent) 15%, transparent);\r\n  }\r\n\r\n  .pill-group .pill:nth-child(6n + 1) {\r\n    --pill-accent: var(--bright-blue);\r\n  }\r\n  .pill-group .pill:nth-child(6n + 2) {\r\n    --pill-accent: var(--french-violet);\r\n  }\r\n  .pill-group .pill:nth-child(6n + 3),\r\n  .pill-group .pill:nth-child(6n + 4),\r\n  .pill-group .pill:nth-child(6n + 5) {\r\n    --pill-accent: var(--hot-red);\r\n  }\r\n\r\n  .pill-group svg {\r\n    margin-inline-start: 0.25rem;\r\n  }\r\n\r\n  .social-links {\r\n    display: flex;\r\n    align-items: center;\r\n    gap: 0.73rem;\r\n    margin-top: 1.5rem;\r\n  }\r\n\r\n  .social-links path {\r\n    transition: fill 0.3s ease;\r\n    fill: var(--gray-400);\r\n  }\r\n\r\n  .social-links a:hover svg path {\r\n    fill: var(--gray-900);\r\n  }\r\n\r\n  @media screen and (max-width: 650px) {\r\n    .content {\r\n      flex-direction: column;\r\n      width: max-content;\r\n    }\r\n\r\n    .divider {\r\n      height: 1px;\r\n      width: 100%;\r\n      background: var(--red-to-pink-to-purple-horizontal-gradient);\r\n      margin-block: 1.5rem;\r\n    }\r\n  }\r\n</style>\r\n\r\n<main class=\"main\">\r\n  <div class=\"content\">\r\n    <div class=\"left-side\">\r\n      <svg\r\n        xmlns=\"http://www.w3.org/2000/svg\"\r\n        viewBox=\"0 0 982 239\"\r\n        fill=\"none\"\r\n        class=\"angular-logo\"\r\n      >\r\n        <g clip-path=\"url(#a)\">\r\n          <path\r\n            fill=\"url(#b)\"\r\n            d=\"M388.676 191.625h30.849L363.31 31.828h-35.758l-56.215 159.797h30.848l13.174-39.356h60.061l13.256 39.356Zm-65.461-62.675 21.602-64.311h1.227l21.602 64.311h-44.431Zm126.831-7.527v70.202h-28.23V71.839h27.002v20.374h1.392c2.782-6.71 7.2-12.028 13.255-15.956 6.056-3.927 13.584-5.89 22.503-5.89 8.264 0 15.465 1.8 21.684 5.318 6.137 3.518 10.964 8.673 14.319 15.382 3.437 6.71 5.074 14.81 4.992 24.383v76.175h-28.23v-71.92c0-8.019-2.046-14.237-6.219-18.819-4.173-4.5-9.819-6.791-17.102-6.791-4.91 0-9.328 1.063-13.174 3.272-3.846 2.128-6.792 5.237-9.001 9.328-2.046 4.009-3.191 8.918-3.191 14.728ZM589.233 239c-10.147 0-18.82-1.391-26.103-4.091-7.282-2.7-13.092-6.382-17.511-10.964-4.418-4.582-7.528-9.655-9.164-15.219l25.448-6.136c1.145 2.372 2.782 4.663 4.991 6.954 2.209 2.291 5.155 4.255 8.837 5.81 3.683 1.554 8.428 2.291 14.074 2.291 8.019 0 14.647-1.964 19.884-5.81 5.237-3.845 7.856-10.227 7.856-19.064v-22.665h-1.391c-1.473 2.946-3.601 5.892-6.383 9.001-2.782 3.109-6.464 5.645-10.965 7.691-4.582 2.046-10.228 3.109-17.101 3.109-9.165 0-17.511-2.209-25.039-6.545-7.446-4.337-13.42-10.883-17.757-19.474-4.418-8.673-6.628-19.473-6.628-32.565 0-13.091 2.21-24.301 6.628-33.383 4.419-9.082 10.311-15.955 17.839-20.7 7.528-4.746 15.874-7.037 25.039-7.037 7.037 0 12.846 1.145 17.347 3.518 4.582 2.373 8.182 5.236 10.883 8.51 2.7 3.272 4.746 6.382 6.137 9.327h1.554v-19.8h27.821v121.749c0 10.228-2.454 18.737-7.364 25.447-4.91 6.709-11.538 11.7-20.048 15.055-8.509 3.355-18.165 4.991-28.884 4.991Zm.245-71.266c5.974 0 11.047-1.473 15.302-4.337 4.173-2.945 7.446-7.118 9.573-12.519 2.21-5.482 3.274-12.027 3.274-19.637 0-7.609-1.064-14.155-3.274-19.8-2.127-5.646-5.318-10.064-9.491-13.255-4.174-3.11-9.329-4.746-15.384-4.746s-11.537 1.636-15.792 4.91c-4.173 3.272-7.365 7.772-9.492 13.418-2.128 5.727-3.191 12.191-3.191 19.392 0 7.2 1.063 13.745 3.273 19.228 2.127 5.482 5.318 9.736 9.573 12.764 4.174 3.027 9.41 4.582 15.629 4.582Zm141.56-26.51V71.839h28.23v119.786h-27.412v-21.273h-1.227c-2.7 6.709-7.119 12.191-13.338 16.446-6.137 4.255-13.747 6.382-22.748 6.382-7.855 0-14.81-1.718-20.783-5.237-5.974-3.518-10.72-8.591-14.075-15.382-3.355-6.709-5.073-14.891-5.073-24.464V71.839h28.312v71.921c0 7.609 2.046 13.664 6.219 18.083 4.173 4.5 9.655 6.709 16.365 6.709 4.173 0 8.183-.982 12.111-3.028 3.927-2.045 7.118-5.072 9.655-9.082 2.537-4.091 3.764-9.164 3.764-15.218Zm65.707-109.395v159.796h-28.23V31.828h28.23Zm44.841 162.169c-7.61 0-14.402-1.391-20.457-4.091-6.055-2.7-10.883-6.791-14.32-12.109-3.518-5.319-5.237-11.946-5.237-19.801 0-6.791 1.228-12.355 3.765-16.773 2.536-4.419 5.891-7.937 10.228-10.637 4.337-2.618 9.164-4.664 14.647-6.055 5.4-1.391 11.046-2.373 16.856-3.027 7.037-.737 12.683-1.391 17.102-1.964 4.337-.573 7.528-1.555 9.574-2.782 1.963-1.309 3.027-3.273 3.027-5.973v-.491c0-5.891-1.718-10.391-5.237-13.664-3.518-3.191-8.51-4.828-15.056-4.828-6.955 0-12.356 1.473-16.447 4.5-4.009 3.028-6.71 6.546-8.183 10.719l-26.348-3.764c2.046-7.282 5.483-13.336 10.31-18.328 4.746-4.909 10.638-8.59 17.511-11.045 6.955-2.455 14.565-3.682 22.912-3.682 5.809 0 11.537.654 17.265 2.045s10.965 3.6 15.711 6.71c4.746 3.109 8.51 7.282 11.455 12.6 2.864 5.318 4.337 11.946 4.337 19.883v80.184h-27.166v-16.446h-.9c-1.719 3.355-4.092 6.464-7.201 9.328-3.109 2.864-6.955 5.237-11.619 6.955-4.828 1.718-10.229 2.536-16.529 2.536Zm7.364-20.701c5.646 0 10.556-1.145 14.729-3.354 4.173-2.291 7.364-5.237 9.655-9.001 2.292-3.763 3.355-7.854 3.355-12.273v-14.155c-.9.737-2.373 1.391-4.5 2.046-2.128.654-4.419 1.145-7.037 1.636-2.619.491-5.155.9-7.692 1.227-2.537.328-4.746.655-6.628.901-4.173.572-8.019 1.472-11.292 2.781-3.355 1.31-5.973 3.11-7.855 5.401-1.964 2.291-2.864 5.318-2.864 8.918 0 5.237 1.882 9.164 5.728 11.782 3.682 2.782 8.51 4.091 14.401 4.091Zm64.643 18.328V71.839h27.412v19.965h1.227c2.21-6.955 5.974-12.274 11.292-16.038 5.319-3.763 11.456-5.645 18.329-5.645 1.555 0 3.355.082 5.237.163 1.964.164 3.601.328 4.91.573v25.938c-1.227-.41-3.109-.819-5.646-1.146a58.814 58.814 0 0 0-7.446-.49c-5.155 0-9.738 1.145-13.829 3.354-4.091 2.209-7.282 5.236-9.655 9.164-2.373 3.927-3.519 8.427-3.519 13.5v70.448h-28.312ZM222.077 39.192l-8.019 125.923L137.387 0l84.69 39.192Zm-53.105 162.825-57.933 33.056-57.934-33.056 11.783-28.556h92.301l11.783 28.556ZM111.039 62.675l30.357 73.803H80.681l30.358-73.803ZM7.937 165.115 0 39.192 84.69 0 7.937 165.115Z\"\r\n          />\r\n          <path\r\n            fill=\"url(#c)\"\r\n            d=\"M388.676 191.625h30.849L363.31 31.828h-35.758l-56.215 159.797h30.848l13.174-39.356h60.061l13.256 39.356Zm-65.461-62.675 21.602-64.311h1.227l21.602 64.311h-44.431Zm126.831-7.527v70.202h-28.23V71.839h27.002v20.374h1.392c2.782-6.71 7.2-12.028 13.255-15.956 6.056-3.927 13.584-5.89 22.503-5.89 8.264 0 15.465 1.8 21.684 5.318 6.137 3.518 10.964 8.673 14.319 15.382 3.437 6.71 5.074 14.81 4.992 24.383v76.175h-28.23v-71.92c0-8.019-2.046-14.237-6.219-18.819-4.173-4.5-9.819-6.791-17.102-6.791-4.91 0-9.328 1.063-13.174 3.272-3.846 2.128-6.792 5.237-9.001 9.328-2.046 4.009-3.191 8.918-3.191 14.728ZM589.233 239c-10.147 0-18.82-1.391-26.103-4.091-7.282-2.7-13.092-6.382-17.511-10.964-4.418-4.582-7.528-9.655-9.164-15.219l25.448-6.136c1.145 2.372 2.782 4.663 4.991 6.954 2.209 2.291 5.155 4.255 8.837 5.81 3.683 1.554 8.428 2.291 14.074 2.291 8.019 0 14.647-1.964 19.884-5.81 5.237-3.845 7.856-10.227 7.856-19.064v-22.665h-1.391c-1.473 2.946-3.601 5.892-6.383 9.001-2.782 3.109-6.464 5.645-10.965 7.691-4.582 2.046-10.228 3.109-17.101 3.109-9.165 0-17.511-2.209-25.039-6.545-7.446-4.337-13.42-10.883-17.757-19.474-4.418-8.673-6.628-19.473-6.628-32.565 0-13.091 2.21-24.301 6.628-33.383 4.419-9.082 10.311-15.955 17.839-20.7 7.528-4.746 15.874-7.037 25.039-7.037 7.037 0 12.846 1.145 17.347 3.518 4.582 2.373 8.182 5.236 10.883 8.51 2.7 3.272 4.746 6.382 6.137 9.327h1.554v-19.8h27.821v121.749c0 10.228-2.454 18.737-7.364 25.447-4.91 6.709-11.538 11.7-20.048 15.055-8.509 3.355-18.165 4.991-28.884 4.991Zm.245-71.266c5.974 0 11.047-1.473 15.302-4.337 4.173-2.945 7.446-7.118 9.573-12.519 2.21-5.482 3.274-12.027 3.274-19.637 0-7.609-1.064-14.155-3.274-19.8-2.127-5.646-5.318-10.064-9.491-13.255-4.174-3.11-9.329-4.746-15.384-4.746s-11.537 1.636-15.792 4.91c-4.173 3.272-7.365 7.772-9.492 13.418-2.128 5.727-3.191 12.191-3.191 19.392 0 7.2 1.063 13.745 3.273 19.228 2.127 5.482 5.318 9.736 9.573 12.764 4.174 3.027 9.41 4.582 15.629 4.582Zm141.56-26.51V71.839h28.23v119.786h-27.412v-21.273h-1.227c-2.7 6.709-7.119 12.191-13.338 16.446-6.137 4.255-13.747 6.382-22.748 6.382-7.855 0-14.81-1.718-20.783-5.237-5.974-3.518-10.72-8.591-14.075-15.382-3.355-6.709-5.073-14.891-5.073-24.464V71.839h28.312v71.921c0 7.609 2.046 13.664 6.219 18.083 4.173 4.5 9.655 6.709 16.365 6.709 4.173 0 8.183-.982 12.111-3.028 3.927-2.045 7.118-5.072 9.655-9.082 2.537-4.091 3.764-9.164 3.764-15.218Zm65.707-109.395v159.796h-28.23V31.828h28.23Zm44.841 162.169c-7.61 0-14.402-1.391-20.457-4.091-6.055-2.7-10.883-6.791-14.32-12.109-3.518-5.319-5.237-11.946-5.237-19.801 0-6.791 1.228-12.355 3.765-16.773 2.536-4.419 5.891-7.937 10.228-10.637 4.337-2.618 9.164-4.664 14.647-6.055 5.4-1.391 11.046-2.373 16.856-3.027 7.037-.737 12.683-1.391 17.102-1.964 4.337-.573 7.528-1.555 9.574-2.782 1.963-1.309 3.027-3.273 3.027-5.973v-.491c0-5.891-1.718-10.391-5.237-13.664-3.518-3.191-8.51-4.828-15.056-4.828-6.955 0-12.356 1.473-16.447 4.5-4.009 3.028-6.71 6.546-8.183 10.719l-26.348-3.764c2.046-7.282 5.483-13.336 10.31-18.328 4.746-4.909 10.638-8.59 17.511-11.045 6.955-2.455 14.565-3.682 22.912-3.682 5.809 0 11.537.654 17.265 2.045s10.965 3.6 15.711 6.71c4.746 3.109 8.51 7.282 11.455 12.6 2.864 5.318 4.337 11.946 4.337 19.883v80.184h-27.166v-16.446h-.9c-1.719 3.355-4.092 6.464-7.201 9.328-3.109 2.864-6.955 5.237-11.619 6.955-4.828 1.718-10.229 2.536-16.529 2.536Zm7.364-20.701c5.646 0 10.556-1.145 14.729-3.354 4.173-2.291 7.364-5.237 9.655-9.001 2.292-3.763 3.355-7.854 3.355-12.273v-14.155c-.9.737-2.373 1.391-4.5 2.046-2.128.654-4.419 1.145-7.037 1.636-2.619.491-5.155.9-7.692 1.227-2.537.328-4.746.655-6.628.901-4.173.572-8.019 1.472-11.292 2.781-3.355 1.31-5.973 3.11-7.855 5.401-1.964 2.291-2.864 5.318-2.864 8.918 0 5.237 1.882 9.164 5.728 11.782 3.682 2.782 8.51 4.091 14.401 4.091Zm64.643 18.328V71.839h27.412v19.965h1.227c2.21-6.955 5.974-12.274 11.292-16.038 5.319-3.763 11.456-5.645 18.329-5.645 1.555 0 3.355.082 5.237.163 1.964.164 3.601.328 4.91.573v25.938c-1.227-.41-3.109-.819-5.646-1.146a58.814 58.814 0 0 0-7.446-.49c-5.155 0-9.738 1.145-13.829 3.354-4.091 2.209-7.282 5.236-9.655 9.164-2.373 3.927-3.519 8.427-3.519 13.5v70.448h-28.312ZM222.077 39.192l-8.019 125.923L137.387 0l84.69 39.192Zm-53.105 162.825-57.933 33.056-57.934-33.056 11.783-28.556h92.301l11.783 28.556ZM111.039 62.675l30.357 73.803H80.681l30.358-73.803ZM7.937 165.115 0 39.192 84.69 0 7.937 165.115Z\"\r\n          />\r\n        </g>\r\n        <defs>\r\n          <radialGradient\r\n            id=\"c\"\r\n            cx=\"0\"\r\n            cy=\"0\"\r\n            r=\"1\"\r\n            gradientTransform=\"rotate(118.122 171.182 60.81) scale(205.794)\"\r\n            gradientUnits=\"userSpaceOnUse\"\r\n          >\r\n            <stop stop-color=\"#FF41F8\" />\r\n            <stop offset=\".707\" stop-color=\"#FF41F8\" stop-opacity=\".5\" />\r\n            <stop offset=\"1\" stop-color=\"#FF41F8\" stop-opacity=\"0\" />\r\n          </radialGradient>\r\n          <linearGradient\r\n            id=\"b\"\r\n            x1=\"0\"\r\n            x2=\"982\"\r\n            y1=\"192\"\r\n            y2=\"192\"\r\n            gradientUnits=\"userSpaceOnUse\"\r\n          >\r\n            <stop stop-color=\"#F0060B\" />\r\n            <stop offset=\"0\" stop-color=\"#F0070C\" />\r\n            <stop offset=\".526\" stop-color=\"#CC26D5\" />\r\n            <stop offset=\"1\" stop-color=\"#7702FF\" />\r\n          </linearGradient>\r\n          <clipPath id=\"a\"><path fill=\"#fff\" d=\"M0 0h982v239H0z\" /></clipPath>\r\n        </defs>\r\n      </svg>\r\n      <h1>Hello, {{ title }}</h1>\r\n      <p>Congratulations! Your app is running. 🎉</p>\r\n    </div>\r\n    <div class=\"divider\" role=\"separator\" aria-label=\"Divider\"></div>\r\n    <div class=\"right-side\">\r\n      <div class=\"pill-group\">\r\n        @for (item of [\r\n          { title: 'Explore the Docs', link: 'https://angular.dev' },\r\n          { title: 'Learn with Tutorials', link: 'https://angular.dev/tutorials' },\r\n          { title: 'CLI Docs', link: 'https://angular.dev/tools/cli' },\r\n          { title: 'Angular Language Service', link: 'https://angular.dev/tools/language-service' },\r\n          { title: 'Angular DevTools', link: 'https://angular.dev/tools/devtools' },\r\n        ]; track item.title) {\r\n          <a\r\n            class=\"pill\"\r\n            [href]=\"item.link\"\r\n            target=\"_blank\"\r\n            rel=\"noopener\"\r\n          >\r\n            <span>{{ item.title }}</span>\r\n            <svg\r\n              xmlns=\"http://www.w3.org/2000/svg\"\r\n              height=\"14\"\r\n              viewBox=\"0 -960 960 960\"\r\n              width=\"14\"\r\n              fill=\"currentColor\"\r\n            >\r\n              <path\r\n                d=\"M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h280v80H200v560h560v-280h80v280q0 33-23.5 56.5T760-120H200Zm188-212-56-56 372-372H560v-80h280v280h-80v-144L388-332Z\"\r\n              />\r\n            </svg>\r\n          </a>\r\n        }\r\n      </div>\r\n      <div class=\"social-links\">\r\n        <a\r\n          href=\"https://github.com/angular/angular\"\r\n          aria-label=\"Github\"\r\n          target=\"_blank\"\r\n          rel=\"noopener\"\r\n        >\r\n          <svg\r\n            width=\"25\"\r\n            height=\"24\"\r\n            viewBox=\"0 0 25 24\"\r\n            fill=\"none\"\r\n            xmlns=\"http://www.w3.org/2000/svg\"\r\n            alt=\"Github\"\r\n          >\r\n            <path\r\n              d=\"M12.3047 0C5.50634 0 0 5.50942 0 12.3047C0 17.7423 3.52529 22.3535 8.41332 23.9787C9.02856 24.0946 9.25414 23.7142 9.25414 23.3871C9.25414 23.0949 9.24389 22.3207 9.23876 21.2953C5.81601 22.0377 5.09414 19.6444 5.09414 19.6444C4.53427 18.2243 3.72524 17.8449 3.72524 17.8449C2.61064 17.082 3.81137 17.0973 3.81137 17.0973C5.04697 17.1835 5.69604 18.3647 5.69604 18.3647C6.79321 20.2463 8.57636 19.7029 9.27978 19.3881C9.39052 18.5924 9.70736 18.0499 10.0591 17.7423C7.32641 17.4347 4.45429 16.3765 4.45429 11.6618C4.45429 10.3185 4.9311 9.22133 5.72065 8.36C5.58222 8.04931 5.16694 6.79833 5.82831 5.10337C5.82831 5.10337 6.85883 4.77319 9.2121 6.36459C10.1965 6.09082 11.2424 5.95546 12.2883 5.94931C13.3342 5.95546 14.3801 6.09082 15.3644 6.36459C17.7023 4.77319 18.7328 5.10337 18.7328 5.10337C19.3942 6.79833 18.9789 8.04931 18.8559 8.36C19.6403 9.22133 20.1171 10.3185 20.1171 11.6618C20.1171 16.3888 17.2409 17.4296 14.5031 17.7321C14.9338 18.1012 15.3337 18.8559 15.3337 20.0084C15.3337 21.6552 15.3183 22.978 15.3183 23.3779C15.3183 23.7009 15.5336 24.0854 16.1642 23.9623C21.0871 22.3484 24.6094 17.7341 24.6094 12.3047C24.6094 5.50942 19.0999 0 12.3047 0Z\"\r\n            />\r\n          </svg>\r\n        </a>\r\n        <a\r\n          href=\"https://twitter.com/angular\"\r\n          aria-label=\"Twitter\"\r\n          target=\"_blank\"\r\n          rel=\"noopener\"\r\n        >\r\n          <svg\r\n            width=\"24\"\r\n            height=\"24\"\r\n            viewBox=\"0 0 24 24\"\r\n            fill=\"none\"\r\n            xmlns=\"http://www.w3.org/2000/svg\"\r\n            alt=\"Twitter\"\r\n          >\r\n            <path\r\n              d=\"M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z\"\r\n            />\r\n          </svg>\r\n        </a>\r\n        <a\r\n          href=\"https://www.youtube.com/channel/UCbn1OgGei-DV7aSRo_HaAiw\"\r\n          aria-label=\"Youtube\"\r\n          target=\"_blank\"\r\n          rel=\"noopener\"\r\n        >\r\n          <svg\r\n            width=\"29\"\r\n            height=\"20\"\r\n            viewBox=\"0 0 29 20\"\r\n            fill=\"none\"\r\n            xmlns=\"http://www.w3.org/2000/svg\"\r\n            alt=\"Youtube\"\r\n          >\r\n            <path\r\n              fill-rule=\"evenodd\"\r\n              clip-rule=\"evenodd\"\r\n              d=\"M27.4896 1.52422C27.9301 1.96749 28.2463 2.51866 28.4068 3.12258C29.0004 5.35161 29.0004 10 29.0004 10C29.0004 10 29.0004 14.6484 28.4068 16.8774C28.2463 17.4813 27.9301 18.0325 27.4896 18.4758C27.0492 18.9191 26.5 19.2389 25.8972 19.4032C23.6778 20 14.8068 20 14.8068 20C14.8068 20 5.93586 20 3.71651 19.4032C3.11363 19.2389 2.56449 18.9191 2.12405 18.4758C1.68361 18.0325 1.36732 17.4813 1.20683 16.8774C0.613281 14.6484 0.613281 10 0.613281 10C0.613281 10 0.613281 5.35161 1.20683 3.12258C1.36732 2.51866 1.68361 1.96749 2.12405 1.52422C2.56449 1.08095 3.11363 0.76113 3.71651 0.596774C5.93586 0 14.8068 0 14.8068 0C14.8068 0 23.6778 0 25.8972 0.596774C26.5 0.76113 27.0492 1.08095 27.4896 1.52422ZM19.3229 10L11.9036 5.77905V14.221L19.3229 10Z\"\r\n            />\r\n          </svg>\r\n        </a>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</main>\r\n\r\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->\r\n<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->\r\n\r\n\r\n<router-outlet />\r\n"
         },
         {
+            "name": "AppointmentCalendarComponent",
+            "id": "component-AppointmentCalendarComponent-17bcb2dc66fcb561351681b1e273ca68c8d100808fda9e71c66bee91e91a9c63826cc07f320f70b6eb0fce22bd5b17837c72dba6a9b90e819d3177facd5ee60c",
+            "file": "src/app/appointment-calendar/appointment-calendar.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-appointment-calendar",
+            "styleUrls": [
+                "./appointment-calendar.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./appointment-calendar.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "appointments_calendar",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "literal type[]",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "currentMonth",
+                    "defaultValue": "new Date()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Date",
+                    "optional": false,
+                    "description": "",
+                    "line": 19
+                },
+                {
+                    "name": "selectedAppointments",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 20
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "changeMonth",
+                    "args": [
+                        {
+                            "name": "event",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 58,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "event",
+                            "type": "Event",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "focusOnMostRecentAppointment",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 26,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "getDaysInMonth",
+                    "args": [
+                        {
+                            "name": "date",
+                            "type": "Date",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "Date[]",
+                    "typeParameters": [],
+                    "line": 38,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "date",
+                            "type": "Date",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "goToAppointment",
+                    "args": [
+                        {
+                            "name": "direction",
+                            "type": "\"previous\" | \"next\"",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 64,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "direction",
+                            "type": "\"previous\" | \"next\"",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "isAppointmentDay",
+                    "args": [
+                        {
+                            "name": "date",
+                            "type": "Date",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "boolean",
+                    "typeParameters": [],
+                    "line": 50,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "date",
+                            "type": "Date",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "isNextDisabled",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "boolean",
+                    "typeParameters": [],
+                    "line": 93,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "isPreviousDisabled",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "boolean",
+                    "typeParameters": [],
+                    "line": 84,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 22,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "selectDate",
+                    "args": [
+                        {
+                            "name": "date",
+                            "type": "Date",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 54,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "date",
+                            "type": "Date",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-appointment-calendar',\r\n  templateUrl: './appointment-calendar.component.html',\r\n  styleUrls: ['./appointment-calendar.component.scss']\r\n})\r\nexport class AppointmentCalendarComponent implements OnInit {\r\n  @Input() appointments_calendar: {\r\n    date: string,\r\n    time: string,\r\n    doctor: string,\r\n    location: string,\r\n    notes: string,\r\n    type: string,\r\n    status: string\r\n  }[] = [];\r\n  \r\n  currentMonth: Date = new Date();\r\n  selectedAppointments: { date: string, time: string, doctor: string, type: string, status: string }[] = [];\r\n\r\n  ngOnInit() {\r\n    this.focusOnMostRecentAppointment();\r\n  }\r\n\r\n  focusOnMostRecentAppointment() {\r\n    const sortedAppointments = this.appointments_calendar\r\n      .map(appointment => new Date(appointment.date))\r\n      .sort((a, b) => b.getTime() - a.getTime());\r\n\r\n    if (sortedAppointments.length > 0) {\r\n      const mostRecentDate = sortedAppointments[0];\r\n      this.currentMonth = new Date(mostRecentDate.getFullYear(), mostRecentDate.getMonth(), 1);\r\n      this.selectedAppointments = this.appointments_calendar.filter(appointment => new Date(appointment.date).toDateString() === mostRecentDate.toDateString());\r\n    }\r\n  }\r\n\r\n  getDaysInMonth(date: Date): Date[] {\r\n    const days = [];\r\n    const year = date.getFullYear();\r\n    const month = date.getMonth();\r\n    const numDays = new Date(year, month + 1, 0).getDate();\r\n\r\n    for (let i = 1; i <= numDays; i++) {\r\n      days.push(new Date(year, month, i));\r\n    }\r\n    return days;\r\n  }\r\n\r\n  isAppointmentDay(date: Date): boolean {\r\n    return this.appointments_calendar.some(appointment => new Date(appointment.date).toDateString() === date.toDateString());\r\n  }\r\n\r\n  selectDate(date: Date) {\r\n    this.selectedAppointments = this.appointments_calendar.filter(appointment => new Date(appointment.date).toDateString() === date.toDateString());\r\n  }\r\n\r\n  changeMonth(event: Event) {\r\n    const target = event.target as HTMLSelectElement;\r\n    const [year, month] = target.value.split('-').map(Number);\r\n    this.currentMonth = new Date(year, month - 1, 1);\r\n  }\r\n\r\n  goToAppointment(direction: 'previous' | 'next') {\r\n    const sortedAppointments = this.appointments_calendar\r\n      .map(appointment => new Date(appointment.date))\r\n      .sort((a, b) => a.getTime() - b.getTime());\r\n\r\n    const currentDate = this.selectedAppointments.length > 0 ? new Date(this.selectedAppointments[0].date) : this.currentMonth;\r\n    let targetDate: Date | undefined;\r\n\r\n    if (direction === 'previous') {\r\n      targetDate = sortedAppointments.reverse().find(date => date < currentDate);\r\n    } else {\r\n      targetDate = sortedAppointments.find(date => date > currentDate);\r\n    }\r\n\r\n    if (targetDate) {\r\n      this.currentMonth = new Date(targetDate.getFullYear(), targetDate.getMonth(), 1);\r\n      this.selectedAppointments = this.appointments_calendar.filter(appointment => new Date(appointment.date).toDateString() === targetDate.toDateString());\r\n    }\r\n  }\r\n\r\n  isPreviousDisabled(): boolean {\r\n    if (this.selectedAppointments.length === 0) return true;\r\n    const sortedAppointments = this.appointments_calendar\r\n      .map(appointment => new Date(appointment.date))\r\n      .sort((a, b) => a.getTime() - b.getTime());\r\n    const currentDate = new Date(this.selectedAppointments[0].date);\r\n    return !sortedAppointments.some(date => date < currentDate);\r\n  }\r\n\r\n  isNextDisabled(): boolean {\r\n    if (this.selectedAppointments.length === 0) return true;\r\n    const sortedAppointments = this.appointments_calendar\r\n      .map(appointment => new Date(appointment.date))\r\n      .sort((a, b) => a.getTime() - b.getTime());\r\n    const currentDate = new Date(this.selectedAppointments[0].date);\r\n    return !sortedAppointments.some(date => date > currentDate);\r\n  }\r\n}",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".calendar {\r\n    max-width: 800px;\r\n    margin: 0 auto;\r\n    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  \r\n    .calendar-header {\r\n      display: flex;\r\n      justify-content: center;\r\n      align-items: center;\r\n      margin-bottom: 20px;\r\n  \r\n      input[type=\"month\"] {\r\n        font-size: 16px;\r\n        padding: 5px;\r\n      }\r\n    }\r\n  \r\n    .calendar-body {\r\n      display: flex;\r\n      flex-wrap: wrap;\r\n      gap: 10px;\r\n    }\r\n  \r\n    .calendar-day {\r\n      flex: 1 1 calc(14.28% - 10px);\r\n      border: 1px solid #ccc;\r\n      border-radius: 8px;\r\n      padding: 10px;\r\n      background-color: #f9f9f9;\r\n      text-align: center;\r\n      cursor: pointer;\r\n  \r\n      &.appointment-day {\r\n        background-color: lightgreen;\r\n      }\r\n    }\r\n  \r\n    .calendar-navigation {\r\n      display: flex;\r\n      justify-content: space-between;\r\n      margin-top: 20px;\r\n  \r\n      .btn {\r\n        padding: 10px 20px;\r\n        font-size: 16px;\r\n        border: none;\r\n        border-radius: 4px;\r\n        cursor: pointer;\r\n  \r\n        &.btn-secondary {\r\n          background-color: #007bff;\r\n          color: white;\r\n        }\r\n  \r\n        &:disabled {\r\n          background-color: #ccc;\r\n          cursor: not-allowed;\r\n        }\r\n      }\r\n    }\r\n  \r\n    .selected-appointments {\r\n      margin-top: 20px;\r\n    }\r\n  }",
+                    "styleUrl": "./appointment-calendar.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"calendar\">\r\n  <app-appointment-search (searchTermChange)=\"searchTerm = $event; filterAppointments()\" (selectedStatusChange)=\"selectedStatus = $event; filterAppointments()\"></app-appointment-search>\r\n\r\n  <div class=\"calendar-header\">\r\n    <input type=\"month\" (change)=\"changeMonth($event)\" [value]=\"currentMonth | date: 'yyyy-MM'\" />\r\n  </div>\r\n  <div class=\"calendar-body\">\r\n    <div *ngFor=\"let day of getDaysInMonth(currentMonth)\" class=\"calendar-day\" [ngClass]=\"{'appointment-day': isAppointmentDay(day)}\" (click)=\"selectDate(day)\">\r\n      <span>{{ day.getDate() }}</span>\r\n    </div>\r\n  </div>\r\n  <div class=\"calendar-navigation\">\r\n    <button [disabled]=\"isPreviousDisabled()\" (click)=\"goToAppointment('previous')\" class=\"btn btn-secondary\">Previous Appointment</button>\r\n    <button [disabled]=\"isNextDisabled()\" (click)=\"goToAppointment('next')\" class=\"btn btn-secondary\">Next Appointment</button>\r\n  </div>\r\n  <div *ngIf=\"selectedAppointments.length > 0\" class=\"selected-appointments\">\r\n    <div *ngFor=\"let appointment of selectedAppointments\">\r\n      <app-appointment-card [appointment]=\"appointment\"></app-appointment-card>\r\n    </div>\r\n  </div>\r\n</div>"
+        },
+        {
+            "name": "AppointmentCardComponent",
+            "id": "component-AppointmentCardComponent-79a65f8c0dc72c25ea82f536228dd065872434ffea9262f5f4c699b83e529c80a95736dc89ec97347f911c2f2c34dc7a319bccbc9d4ab8898cd931c43a74364d",
+            "file": "src/app/appointment-card/appointment-card.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-appointment-card",
+            "styleUrls": [
+                "./appointment-card.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./appointment-card.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "appointment",
+                    "defaultValue": "{\r\n    date: '',\r\n    time: '',\r\n    doctor: '',\r\n    location: '',\r\n    notes: '',\r\n    type: '',\r\n    status: ''\r\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "literal type",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "cancel",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 33,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "reschedule",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 28,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-appointment-card',\r\n  templateUrl: './appointment-card.component.html',\r\n  styleUrls: ['./appointment-card.component.scss']\r\n})\r\nexport class AppointmentCardComponent {\r\n  @Input() appointment: {\r\n    date: string,\r\n    time: string,\r\n    doctor: string,\r\n    location: string,\r\n    notes: string,\r\n    type: string, // Type of appointment (e.g., Therapy, Consultation)\r\n    status: string // Status of the appointment (e.g., Scheduled, Completed, Canceled)\r\n  } = {\r\n    date: '',\r\n    time: '',\r\n    doctor: '',\r\n    location: '',\r\n    notes: '',\r\n    type: '',\r\n    status: ''\r\n  };\r\n\r\n  // Method to handle rescheduling\r\n  reschedule() {\r\n    console.log('Reschedule appointment:', this.appointment);\r\n  }\r\n\r\n  // Method to handle cancellation\r\n  cancel() {\r\n    console.log('Cancel appointment:', this.appointment);\r\n  }\r\n}",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".appointment-card {\r\n    border: 1px solid #e0e0e0;\r\n    padding: 16px;\r\n    border-radius: 8px;\r\n    background-color: #fff;\r\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\r\n    max-width: 400px;\r\n    margin: 16px auto;\r\n    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n    transition: transform 0.3s ease, box-shadow 0.3s ease;\r\n  \r\n    &:hover {\r\n      transform: translateY(-5px);\r\n      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);\r\n    }\r\n  \r\n    .appointment-header {\r\n      display: flex;\r\n      justify-content: space-between;\r\n      align-items: center;\r\n      margin-bottom: 16px;\r\n  \r\n      h3 {\r\n        font-size: 1.25em;\r\n        margin: 0;\r\n      }\r\n  \r\n      .status {\r\n        padding: 4px 8px;\r\n        border-radius: 4px;\r\n        font-size: 0.875em;\r\n        text-transform: capitalize;\r\n  \r\n        &.scheduled {\r\n          background-color: #e0f7fa;\r\n          color: #00796b;\r\n        }\r\n  \r\n        &.completed {\r\n          background-color: #e8f5e9;\r\n          color: #388e3c;\r\n        }\r\n  \r\n        &.canceled {\r\n          background-color: #ffebee;\r\n          color: #d32f2f;\r\n        }\r\n      }\r\n    }\r\n  \r\n    .appointment-details {\r\n      margin-bottom: 16px;\r\n  \r\n      p {\r\n        margin: 8px 0;\r\n      }\r\n    }\r\n  \r\n    .button-group {\r\n      display: flex;\r\n      gap: 8px;\r\n  \r\n      .btn {\r\n        padding: 8px 16px;\r\n        border: none;\r\n        border-radius: 4px;\r\n        cursor: pointer;\r\n        font-size: 14px;\r\n        transition: background-color 0.3s ease;\r\n  \r\n        &.btn-primary {\r\n          background-color: #1ea7fd;\r\n          color: #fff;\r\n  \r\n          &:hover {\r\n            background-color: #166bb3;\r\n          }\r\n        }\r\n  \r\n        &.btn-secondary {\r\n          background-color: #f0f0f0;\r\n          color: #333;\r\n  \r\n          &:hover {\r\n            background-color: #d6d6d6;\r\n          }\r\n        }\r\n  \r\n        &:focus {\r\n          outline: 2px solid #1ea7fd;\r\n          outline-offset: 2px;\r\n        }\r\n      }\r\n    }\r\n  }",
+                    "styleUrl": "./appointment-card.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"appointment-card\">\r\n    <div class=\"appointment-header\">\r\n      <h3>{{ appointment.type }} Appointment</h3>\r\n      <span class=\"status\" [ngClass]=\"appointment.status.toLowerCase()\">{{ appointment.status }}</span>\r\n    </div>\r\n    <div class=\"appointment-details\">\r\n      <p><strong>Date:</strong> {{ appointment.date }}</p>\r\n      <p><strong>Time:</strong> {{ appointment.time }}</p>\r\n      <p><strong>Doctor:</strong> {{ appointment.doctor }}</p>\r\n      <p><strong>Location:</strong> {{ appointment.location }}</p>\r\n      <p><strong>Notes:</strong> {{ appointment.notes }}</p>\r\n    </div>\r\n    <div class=\"button-group\">\r\n      <button class=\"btn btn-primary\" (click)=\"reschedule()\">Reschedule</button>\r\n      <button class=\"btn btn-secondary\" (click)=\"cancel()\">Cancel</button>\r\n    </div>\r\n  </div>"
+        },
+        {
+            "name": "AppointmentListComponent",
+            "id": "component-AppointmentListComponent-7f7d00f25451a61b6b45cba35eadbbd0dc681942dd80da755f22aea3e44febe5755db5edcdde332b549b0db339a94daf683cb5ee8658e89364cd45e2ea24183b",
+            "file": "src/app/appointment-list/appointment-list.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-appointment-list",
+            "styleUrls": [
+                "./appointment-list.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./appointment-list.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "appointments",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 9,
+                    "type": "literal type[]",
+                    "decorators": []
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "filteredAppointments",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type[]",
+                    "optional": false,
+                    "description": "",
+                    "line": 19
+                },
+                {
+                    "name": "searchTerm",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 29
+                },
+                {
+                    "name": "selectedStatus",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 30
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "filterAppointments",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 36,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 32,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-appointment-list',\r\n  templateUrl: './appointment-list.component.html',\r\n  styleUrls: ['./appointment-list.component.scss']\r\n})\r\nexport class AppointmentListComponent implements OnInit {\r\n  @Input() appointments: {\r\n    date: string,\r\n    time: string,\r\n    doctor: string,\r\n    location: string,\r\n    notes: string,\r\n    type: string,\r\n    status: string\r\n  }[] = [];\r\n\r\n  filteredAppointments: {\r\n    date: string,\r\n    time: string,\r\n    doctor: string,\r\n    location: string,\r\n    notes: string,\r\n    type: string,\r\n    status: string\r\n  }[] = [];\r\n\r\n  searchTerm: string = '';\r\n  selectedStatus: string = '';\r\n\r\n  ngOnInit() {\r\n    this.filteredAppointments = this.appointments;\r\n  }\r\n\r\n  filterAppointments() {\r\n    this.filteredAppointments = this.appointments.filter(appointment => {\r\n      return (\r\n        (this.searchTerm === '' || appointment.doctor.toLowerCase().includes(this.searchTerm.toLowerCase())) &&\r\n        (this.selectedStatus === '' || appointment.status === this.selectedStatus)\r\n      );\r\n    });\r\n  }\r\n}",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".appointment-list {\r\n    max-width: 600px;\r\n    margin: 0 auto;\r\n    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n\r\n    .search-filter {\r\n      display: flex;\r\n      gap: 8px;\r\n      margin-bottom: 16px;\r\n\r\n      input, select {\r\n        padding: 8px;\r\n        border: 1px solid #ccc;\r\n        border-radius: 4px;\r\n        font-size: 14px;\r\n        outline: none;\r\n\r\n        &:focus {\r\n          border-color: #1ea7fd;\r\n          box-shadow: 0 0 0 3px rgba(30, 167, 253, 0.25);\r\n        }\r\n      }\r\n    }\r\n\r\n    ul {\r\n      list-style: none;\r\n      padding: 0;\r\n\r\n      li {\r\n        padding: 8px;\r\n        border-bottom: 1px solid #ccc;\r\n      }\r\n    }\r\n  }\r\n\r\n  .visually-hidden {\r\n    position: absolute;\r\n    width: 1px;\r\n    height: 1px;\r\n    margin: -1px;\r\n    padding: 0;\r\n    overflow: hidden;\r\n    clip: rect(0, 0, 0, 0);\r\n    border: 0;\r\n  }",
+                    "styleUrl": "./appointment-list.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<div class=\"appointment-list\">\r\n  <app-appointment-search (searchTermChange)=\"searchTerm = $event; filterAppointments()\" (selectedStatusChange)=\"selectedStatus = $event; filterAppointments()\"></app-appointment-search>\r\n\r\n  <ul id=\"appointment-list\" aria-live=\"polite\">\r\n    <li *ngIf=\"filteredAppointments.length === 0\">No appointments found</li>\r\n    <li *ngFor=\"let appointment of filteredAppointments\">\r\n      <app-appointment-card [appointment]=\"appointment\"></app-appointment-card>\r\n    </li>\r\n  </ul>\r\n</div>"
+        },
+        {
+            "name": "AppointmentSearchComponent",
+            "id": "component-AppointmentSearchComponent-876c16eb54c94cf76c7da7e029cbbbf25a746bd21ed13ce25545a32d1964a5a0a91e2c39f71767b0bfc425c70d5e32489a2d44716f51e182fa71d9679b472e14",
+            "file": "src/app/appointment-search/appointment-search.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-appointment-search",
+            "styleUrls": [
+                "./appointment-search.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./appointment-search.component.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "searchTermChange",
+                    "defaultValue": "new EventEmitter<string>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 12,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "selectedStatusChange",
+                    "defaultValue": "new EventEmitter<string>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 13,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "searchTerm",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "selectedStatus",
+                    "defaultValue": "''",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "onSearchTermChange",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 15,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onSelectedStatusChange",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 19,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, Output, EventEmitter } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'app-appointment-search',\r\n  templateUrl: './appointment-search.component.html',\r\n  styleUrls: ['./appointment-search.component.scss']\r\n})\r\nexport class AppointmentSearchComponent {\r\n  searchTerm: string = '';\r\n  selectedStatus: string = '';\r\n\r\n  @Output() searchTermChange = new EventEmitter<string>();\r\n  @Output() selectedStatusChange = new EventEmitter<string>();\r\n\r\n  onSearchTermChange() {\r\n    this.searchTermChange.emit(this.searchTerm);\r\n  }\r\n\r\n  onSelectedStatusChange() {\r\n    this.selectedStatusChange.emit(this.selectedStatus);\r\n  }\r\n}",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".search-filter {\r\n    display: flex;\r\n    gap: 8px;\r\n    margin-bottom: 16px;\r\n  \r\n    input, select {\r\n      padding: 8px;\r\n      border: 1px solid #ccc;\r\n      border-radius: 4px;\r\n      font-size: 14px;\r\n      outline: none;\r\n  \r\n      &:focus {\r\n        border-color: #1ea7fd;\r\n        box-shadow: 0 0 0 3px rgba(30, 167, 253, 0.25);\r\n      }\r\n    }\r\n  }\r\n  \r\n  .visually-hidden {\r\n    position: absolute;\r\n    width: 1px;\r\n    height: 1px;\r\n    margin: -1px;\r\n    padding: 0;\r\n    overflow: hidden;\r\n    clip: rect(0, 0, 0, 0);\r\n    border: 0;\r\n  }",
+                    "styleUrl": "./appointment-search.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"search-filter\">\r\n    <label for=\"search-input\" class=\"visually-hidden\">Search appointments</label>\r\n    <input id=\"search-input\" type=\"text\" placeholder=\"Search by doctor...\" [(ngModel)]=\"searchTerm\" (input)=\"onSearchTermChange()\" aria-label=\"Search appointments\" />\r\n  \r\n    <label for=\"status-filter\" class=\"visually-hidden\">Filter by status</label>\r\n    <select id=\"status-filter\" [(ngModel)]=\"selectedStatus\" (change)=\"onSelectedStatusChange()\" aria-label=\"Filter by status\">\r\n      <option value=\"\">All Statuses</option>\r\n      <option value=\"Scheduled\">Scheduled</option>\r\n      <option value=\"Completed\">Completed</option>\r\n      <option value=\"Canceled\">Canceled</option>\r\n    </select>\r\n  </div>"
+        },
+        {
             "name": "ButtonComponent",
             "id": "component-ButtonComponent-86e2311c54fbca7431c12e070d0fd5b0ebe343eec0553a392f182ba0e04a8f86613233d26ee47718fd0e7a65078f580c76a1fcc928ce55de81193d6618025bc4",
             "file": "src/stories/button.component.ts",
@@ -453,7 +999,7 @@
         },
         {
             "name": "PatientDetailViewComponent",
-            "id": "component-PatientDetailViewComponent-d8a418ea37ea78a351c34ae2d1182627aa258f9a90ec442b2113d1ad270bf47675652bb69278f92ecd553e06bbdaa4377f07267e7a980573e64a4744f4906997",
+            "id": "component-PatientDetailViewComponent-c0e0434e27263c411ce80d4a2c1b27cab710b526dd93303120a0f6d992a7351395bc76a364628bc91fbdf78b9fd2a6c8944a6f3c0b7790df469573fe89950109",
             "file": "src/app/patient-detail-view/patient-detail-view.component.ts",
             "encapsulation": [],
             "entryComponents": [],
@@ -476,7 +1022,25 @@
                     "defaultValue": "[]",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 36,
+                    "line": 31,
+                    "type": "literal type[]",
+                    "decorators": []
+                },
+                {
+                    "name": "appointments_calendar",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 41,
+                    "type": "literal type[]",
+                    "decorators": []
+                },
+                {
+                    "name": "appointments_list",
+                    "defaultValue": "[]",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 32,
                     "type": "literal type[]",
                     "decorators": []
                 },
@@ -485,7 +1049,7 @@
                     "defaultValue": "[]",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 34,
+                    "line": 29,
                     "type": "literal type[]",
                     "decorators": []
                 },
@@ -494,7 +1058,7 @@
                     "defaultValue": "[]",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 35,
+                    "line": 30,
                     "type": "literal type[]",
                     "decorators": []
                 },
@@ -503,7 +1067,7 @@
                     "defaultValue": "[]",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 33,
+                    "line": 28,
                     "type": "literal type[]",
                     "decorators": []
                 },
@@ -512,14 +1076,140 @@
                     "defaultValue": "{\r\n    name: '',\r\n    age: 0,\r\n    gender: '',\r\n    contact: '',\r\n    address: '',\r\n    conditions: '',\r\n    treatmentPlan: '',\r\n    provider: ''\r\n  }",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "line": 13,
+                    "line": 8,
                     "type": "literal type",
                     "decorators": []
                 }
             ],
             "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "expandedSections",
+                    "defaultValue": "{\r\n    medications: false,\r\n    allergies: false,\r\n    appointments: false\r\n  }",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "literal type",
+                    "optional": false,
+                    "description": "",
+                    "line": 50
+                },
+                {
+                    "name": "isCalendarView",
+                    "defaultValue": "false",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "",
+                    "line": 80
+                },
+                {
+                    "name": "viewMode",
+                    "defaultValue": "'list'",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "\"list\" | \"calendar\"",
+                    "optional": false,
+                    "description": "",
+                    "line": 56
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "isSectionExpanded",
+                    "args": [
+                        {
+                            "name": "section",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "boolean",
+                    "typeParameters": [],
+                    "line": 71,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "section",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "switchViewMode",
+                    "args": [
+                        {
+                            "name": "mode",
+                            "type": "\"list\" | \"calendar\"",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 75,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "mode",
+                            "type": "\"list\" | \"calendar\"",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "toggleAppointmentView",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 83,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "toggleSection",
+                    "args": [
+                        {
+                            "name": "section",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 60,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "section",
+                            "type": "string",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
             "deprecated": false,
             "deprecationMessage": "",
             "hostBindings": [],
@@ -529,17 +1219,58 @@
             "description": "",
             "rawdescription": "\n",
             "type": "component",
-            "sourceCode": "import { Component, Input } from '@angular/core';\r\nimport { PatientNotesComponent } from '../patient-notes/patient-notes.component';\r\nimport { PatientHistoryTimelineComponent } from '../patient-history-timeline/patient-history-timeline.component';\r\nimport { PatientMedicationListComponent } from '../patient-medication-list/patient-medication-list.component';\r\nimport { PatientAllergyListComponent } from '../patient-allergy-list/patient-allergy-list.component';\r\n\r\n@Component({\r\n  selector: 'app-patient-detail-view',\r\n  templateUrl: './patient-detail-view.component.html',\r\n  styleUrls: ['./patient-detail-view.component.scss']\r\n})\r\nexport class PatientDetailViewComponent {\r\n  @Input() patient: { \r\n    name: string, \r\n    age: number, \r\n    gender: string, \r\n    contact: string, \r\n    address: string, \r\n    conditions: string, \r\n    treatmentPlan: string, \r\n    provider: string \r\n  } = {\r\n    name: '',\r\n    age: 0,\r\n    gender: '',\r\n    contact: '',\r\n    address: '',\r\n    conditions: '',\r\n    treatmentPlan: '',\r\n    provider: ''\r\n  };\r\n\r\n  @Input() notes: { date: string, content: string, tags: string[], attachments: string[], author: string }[] = [];\r\n  @Input() history: { date: string, event: string, details: string }[] = [];\r\n  @Input() medications: { name: string, dosage: string, frequency: string, prescribedBy: string }[] = [];\r\n  @Input() allergies: { name: string, reaction: string, severity: string }[] = [];\r\n}",
+            "sourceCode": "import { Component, ElementRef, Renderer2, Input } from '@angular/core';\r\n@Component({\r\n  selector: 'app-patient-detail-view',\r\n  templateUrl: './patient-detail-view.component.html',\r\n  styleUrls: ['./patient-detail-view.component.scss']\r\n})\r\nexport class PatientDetailViewComponent {\r\n  @Input() patient: {\r\n    name: string,\r\n    age: number,\r\n    gender: string,\r\n    contact: string,\r\n    address: string,\r\n    conditions: string,\r\n    treatmentPlan: string,\r\n    provider: string\r\n  } = {\r\n    name: '',\r\n    age: 0,\r\n    gender: '',\r\n    contact: '',\r\n    address: '',\r\n    conditions: '',\r\n    treatmentPlan: '',\r\n    provider: ''\r\n  };\r\n\r\n  @Input() notes: { date: string, content: string, tags: string[], attachments: string[], author: string }[] = [];\r\n  @Input() history: { date: string, event: string, details: string }[] = [];\r\n  @Input() medications: { name: string, dosage: string, frequency: string, prescribedBy: string }[] = [];\r\n  @Input() allergies: { name: string, reaction: string, severity: string }[] = [];\r\n  @Input() appointments_list: {\r\n    date: string,\r\n    time: string,\r\n    doctor: string,\r\n    location: string,\r\n    notes: string,\r\n    type: string,\r\n    status: string\r\n  }[] = [];\r\n  @Input() appointments_calendar: {\r\n    date: string,\r\n    time: string,\r\n    doctor: string,\r\n    location: string,\r\n    notes: string,\r\n    type: string,\r\n    status: string\r\n  }[] = [];\r\n  expandedSections: { [key: string]: boolean } = {\r\n    medications: false,\r\n    allergies: false,\r\n    appointments: false\r\n  };\r\n\r\n  viewMode: 'list' | 'calendar' = 'list';\r\n\r\n  constructor(private el: ElementRef, private renderer: Renderer2) {}\r\n\r\n  toggleSection(section: string) {\r\n    this.expandedSections[section] = !this.expandedSections[section];\r\n    setTimeout(() => {\r\n      const content = this.el.nativeElement.querySelector(`.tab-content.${section}`);\r\n      if (this.expandedSections[section]) {\r\n        this.renderer.setStyle(content, 'max-height', `${content.scrollHeight}px`);\r\n      } else {\r\n        this.renderer.setStyle(content, 'max-height', '0');\r\n      }\r\n    }, 0);\r\n  }\r\n  isSectionExpanded(section: string): boolean {\r\n    return this.expandedSections[section];\r\n  }\r\n\r\n  switchViewMode(mode: 'list' | 'calendar') {\r\n    this.viewMode = mode;\r\n  }\r\n\r\n  // New property to manage the view state\r\n  isCalendarView: boolean = false;\r\n\r\n  // Method to toggle the view\r\n  toggleAppointmentView() {\r\n    this.isCalendarView = !this.isCalendarView;\r\n  }\r\n}",
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".patient-detail-view {\r\n  border: 1px solid #ccc;\r\n  padding: 16px;\r\n  border-radius: 8px;\r\n  background-color: #fff;\r\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\r\n  max-width: 600px;\r\n  margin: 16px auto;\r\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n\r\n  h2 {\r\n    font-size: 1.5em;\r\n    margin-bottom: 16px;\r\n  }\r\n\r\n  .patient-details {\r\n    display: grid;\r\n    grid-template-columns: auto 1fr;\r\n    gap: 8px 16px;\r\n    margin-bottom: 16px;\r\n\r\n    &__label {\r\n      font-weight: bold;\r\n    }\r\n\r\n    &__value {\r\n      a {\r\n        color: #1ea7fd;\r\n        text-decoration: none;\r\n      }\r\n    }\r\n  }\r\n}\r\n",
+                    "data": ".patient-detail-view {\r\n    border: 1px solid #ccc;\r\n    padding: 16px;\r\n    border-radius: 8px;\r\n    background-color: #fff;\r\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);\r\n    max-width: 600px;\r\n    margin: 16px auto;\r\n    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\r\n  \r\n    h2 {\r\n      font-size: 1.5em;\r\n      margin-bottom: 16px;\r\n    }\r\n\r\n    .tabs {\r\n        margin-top: 20px;\r\n    }\r\n\r\n    .tab {\r\n        cursor: pointer;\r\n        padding: 10px;\r\n        background-color: #f1f1f1;\r\n        border: 1px solid #ccc;\r\n        margin-bottom: 5px;\r\n    }\r\n\r\n    .tab-content {\r\n        overflow: hidden;\r\n        max-height: 0;\r\n        transition: max-height 0.3s ease-out;\r\n    }\r\n\r\n    .tab-content.expanded {\r\n        // No need to set max-height here, it will be set dynamically\r\n    }\r\n\r\n    .toggle-view-btn {\r\n        padding: 15px 20px; /* Add padding to the top */\r\n        border: none;\r\n        border-radius: 4px;\r\n        background-color: #1ea7fd;\r\n        color: #fff;\r\n        cursor: pointer;\r\n        font-size: 14px;\r\n        transition: background-color 0.3s ease;\r\n        display: block;\r\n        margin: 20px auto; /* Center the button and add top and bottom margin */\r\n    \r\n        &:hover {\r\n            background-color: #166bb3;\r\n        }\r\n    \r\n        &:focus {\r\n            outline: none; /* Remove the default outline */\r\n        }\r\n    }\r\n  \r\n    .patient-details {\r\n      display: grid;\r\n      grid-template-columns: auto 1fr;\r\n      gap: 8px 16px;\r\n      margin-bottom: 16px;\r\n  \r\n      &__label {\r\n        font-weight: bold;\r\n      }\r\n  \r\n      &__value {\r\n        a {\r\n          color: #1ea7fd;\r\n          text-decoration: none;\r\n        }\r\n      }\r\n    }\r\n}",
                     "styleUrl": "./patient-detail-view.component.scss"
                 }
             ],
             "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [
+                    {
+                        "name": "el",
+                        "type": "ElementRef",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    },
+                    {
+                        "name": "renderer",
+                        "type": "Renderer2",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "line": 56,
+                "jsdoctags": [
+                    {
+                        "name": "el",
+                        "type": "ElementRef",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    },
+                    {
+                        "name": "renderer",
+                        "type": "Renderer2",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            },
             "extends": [],
-            "templateData": "<div class=\"patient-detail-view\" role=\"region\" aria-labelledby=\"patient-detail-heading\">\r\n    <h2 id=\"patient-detail-heading\">{{ patient.name }}</h2>\r\n    <div class=\"patient-details\">\r\n      <div class=\"patient-details__label\"><strong>Age:</strong></div>\r\n      <div class=\"patient-details__value\">{{ patient.age }}</div>\r\n      <div class=\"patient-details__label\"><strong>Gender:</strong></div>\r\n      <div class=\"patient-details__value\">{{ patient.gender }}</div>\r\n      <div class=\"patient-details__label\"><strong>Contact:</strong></div>\r\n      <div class=\"patient-details__value\"><a href=\"tel:{{ patient.contact }}\">{{ patient.contact }}</a></div>\r\n      <div class=\"patient-details__label\"><strong>Address:</strong></div>\r\n      <div class=\"patient-details__value\">{{ patient.address }}</div>\r\n      <div class=\"patient-details__label\"><strong>Mental Health Conditions:</strong></div>\r\n      <div class=\"patient-details__value\">{{ patient.conditions }}</div>\r\n      <div class=\"patient-details__label\"><strong>Treatment Plan:</strong></div>\r\n      <div class=\"patient-details__value\">{{ patient.treatmentPlan }}</div>\r\n      <div class=\"patient-details__label\"><strong>Healthcare Provider:</strong></div>\r\n      <div class=\"patient-details__value\">{{ patient.provider }}</div>\r\n    </div>\r\n    <app-patient-history-timeline [history]=\"history\"></app-patient-history-timeline>\r\n    <app-patient-notes [notes]=\"notes\"></app-patient-notes>\r\n    <app-patient-medication-list [medications]=\"medications\"></app-patient-medication-list>\r\n    <app-patient-allergy-list [allergies]=\"allergies\"></app-patient-allergy-list>\r\n  </div>"
+            "templateData": "<div class=\"patient-detail-view\" role=\"region\" aria-labelledby=\"patient-detail-heading\">\r\n    <h2 id=\"patient-detail-heading\">{{ patient.name }}</h2>\r\n    <div class=\"patient-details\">\r\n      <!-- Patient details content -->\r\n    </div>\r\n    <app-patient-history-timeline [history]=\"history\"></app-patient-history-timeline>\r\n    <app-patient-notes [notes]=\"notes\"></app-patient-notes>\r\n\r\n    <!-- Sectional Tabs -->\r\n    <div class=\"tabs\">\r\n        <div class=\"tab\" (click)=\"toggleSection('appointments')\">\r\n            <h3>Appointments</h3>\r\n        </div>\r\n        <div class=\"tab-content appointments\" [ngClass]=\"{'expanded': isSectionExpanded('appointments')}\">\r\n            <button class=\"toggle-view-btn\" (click)=\"toggleAppointmentView()\">\r\n                {{ isCalendarView ? 'Switch to List View' : 'Switch to Calendar View' }}\r\n            </button>\r\n            <app-appointment-list *ngIf=\"isSectionExpanded('appointments') && !isCalendarView\" [appointments]=\"appointments_list\"></app-appointment-list>\r\n            <app-appointment-calendar *ngIf=\"isSectionExpanded('appointments') && isCalendarView\" [appointments_calendar]=\"appointments_calendar\"></app-appointment-calendar>\r\n        </div>\r\n        <div class=\"tab\" (click)=\"toggleSection('medications')\">\r\n            <h3>Medications</h3>\r\n        </div>\r\n        <div class=\"tab-content medications\" [ngClass]=\"{'expanded': isSectionExpanded('medications')}\">\r\n            <app-patient-medication-list *ngIf=\"isSectionExpanded('medications')\" [medications]=\"medications\"></app-patient-medication-list>\r\n        </div>\r\n\r\n        <div class=\"tab\" (click)=\"toggleSection('allergies')\">\r\n            <h3>Allergies</h3>\r\n        </div>\r\n        <div class=\"tab-content allergies\" [ngClass]=\"{'expanded': isSectionExpanded('allergies')}\">\r\n            <app-patient-allergy-list *ngIf=\"isSectionExpanded('allergies')\" [allergies]=\"allergies\"></app-patient-allergy-list>\r\n        </div>\r\n\r\n\r\n    </div>\r\n</div>"
         },
         {
             "name": "PatientHistoryTimelineComponent",
@@ -1251,7 +1982,7 @@
     },
     "routes": [],
     "coverage": {
-        "count": 5,
+        "count": 4,
         "status": "low",
         "files": [
             {
@@ -1274,6 +2005,42 @@
                 "status": "low"
             },
             {
+                "filePath": "src/app/appointment-calendar/appointment-calendar.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppointmentCalendarComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/13",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/appointment-card/appointment-card.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppointmentCardComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/appointment-list/appointment-list.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppointmentListComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/appointment-search/appointment-search.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AppointmentSearchComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
                 "filePath": "src/app/patient-allergy-list/patient-allergy-list.component.ts",
                 "type": "component",
                 "linktype": "component",
@@ -1288,7 +2055,7 @@
                 "linktype": "component",
                 "name": "PatientDetailViewComponent",
                 "coveragePercent": 0,
-                "coverageCount": "0/6",
+                "coverageCount": "0/16",
                 "status": "low"
             },
             {

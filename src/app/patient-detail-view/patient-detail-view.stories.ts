@@ -11,7 +11,7 @@ import { AppointmentCardComponent } from '../appointment-card/appointment-card.c
 import { AppointmentCalendarComponent } from '../appointment-calendar/appointment-calendar.component';
 
 export default {
-  title: 'Patient UI/PatientDetailView',
+  title: 'Patient Clinical UI/PatientDetailView',
   component: PatientDetailViewComponent,
   decorators: [
     moduleMetadata({

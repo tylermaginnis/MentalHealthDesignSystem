@@ -1,6 +1,7 @@
 import { moduleMetadata, StoryFn, Meta } from '@storybook/angular';
 import { AppointmentListComponent } from './appointment-list.component';
 import { AppointmentCardComponent } from '../appointment-card/appointment-card.component';
+import { AppointmentSearchComponent } from '../appointment-search/appointment-search.component';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
@@ -9,7 +10,7 @@ export default {
   component: AppointmentListComponent,
   decorators: [
     moduleMetadata({
-      declarations: [AppointmentListComponent, AppointmentCardComponent],
+      declarations: [AppointmentListComponent, AppointmentCardComponent, AppointmentSearchComponent],
       imports: [CommonModule, FormsModule],
     }),
   ],

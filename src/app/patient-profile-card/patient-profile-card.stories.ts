@@ -2,7 +2,7 @@ import { moduleMetadata, StoryFn, Meta } from '@storybook/angular';
 import { PatientProfileCardComponent } from './patient-profile-card.component';
 
 export default {
-  title: 'Patient UI/PatientProfileCard',
+  title: 'Patient Clinical UI/PatientProfileCard',
   component: PatientProfileCardComponent,
   decorators: [
     moduleMetadata({

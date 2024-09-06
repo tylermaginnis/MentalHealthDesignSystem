@@ -3,7 +3,7 @@ import { PatientMedicationListComponent } from './patient-medication-list.compon
 import { CommonModule } from '@angular/common';
 
 export default {
-  title: 'Patient UI/PatientMedicationList',
+  title: 'Patient Clinical UI/PatientMedicationList',
   component: PatientMedicationListComponent,
   decorators: [
     moduleMetadata({

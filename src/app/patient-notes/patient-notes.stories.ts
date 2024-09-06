@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 export default {
-  title: 'Patient UI/PatientNotes',
+  title: 'Patient Clinical UI/PatientNotes',
   component: PatientNotesComponent,
   decorators: [
     moduleMetadata({

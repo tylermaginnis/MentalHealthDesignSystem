@@ -1,15 +1,17 @@
 import { moduleMetadata, StoryFn, Meta } from '@storybook/angular';
 import { AppointmentCalendarComponent } from './appointment-calendar.component';
 import { AppointmentCardComponent } from '../appointment-card/appointment-card.component';
+import { AppointmentSearchComponent } from '../appointment-search/appointment-search.component';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms'; // Import FormsModule
 
 export default {
   title: 'Appointment UI/AppointmentCalendar',
   component: AppointmentCalendarComponent,
   decorators: [
     moduleMetadata({
-      declarations: [AppointmentCalendarComponent, AppointmentCardComponent],
-      imports: [CommonModule],
+      declarations: [AppointmentCalendarComponent, AppointmentCardComponent, AppointmentSearchComponent],
+      imports: [CommonModule, FormsModule], // Add FormsModule to imports array
     }),
   ],
 } as Meta;

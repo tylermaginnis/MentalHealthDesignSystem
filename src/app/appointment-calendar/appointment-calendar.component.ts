@@ -6,6 +6,10 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./appointment-calendar.component.scss']
 })
 export class AppointmentCalendarComponent implements OnInit {
+  currentMonth: Date = new Date();
+  selectedAppointments: any[] = [];
+  searchTerm: string = '';
+  selectedStatus: string = '';
   @Input() appointments_calendar: {
     date: string,
     time: string,
@@ -15,24 +19,25 @@ export class AppointmentCalendarComponent implements OnInit {
     type: string,
     status: string
   }[] = [];
-  
-  currentMonth: Date = new Date();
-  selectedAppointments: { date: string, time: string, doctor: string, type: string, status: string }[] = [];
 
   ngOnInit() {
-    this.focusOnMostRecentAppointment();
+    this.setDefaultDate();
+    this.filterAppointments();
   }
 
-  focusOnMostRecentAppointment() {
-    const sortedAppointments = this.appointments_calendar
-      .map(appointment => new Date(appointment.date))
-      .sort((a, b) => b.getTime() - a.getTime());
-
-    if (sortedAppointments.length > 0) {
-      const mostRecentDate = sortedAppointments[0];
-      this.currentMonth = new Date(mostRecentDate.getFullYear(), mostRecentDate.getMonth(), 1);
-      this.selectedAppointments = this.appointments_calendar.filter(appointment => new Date(appointment.date).toDateString() === mostRecentDate.toDateString());
+  setDefaultDate() {
+    if (this.appointments_calendar.length > 0) {
+      const mostRecentAppointment = this.appointments_calendar.reduce((latest, appointment) => {
+        return new Date(appointment.date) > new Date(latest.date) ? appointment : latest;
+      });
+      this.currentMonth = this.normalizeDate(new Date(mostRecentAppointment.date));
+      this.selectDate(this.currentMonth);
     }
+  }
+
+  changeMonth(event: any) {
+    this.currentMonth = this.normalizeDate(new Date(event.target.value));
+    this.filterAppointments();
   }
 
   getDaysInMonth(date: Date): Date[] {
@@ -44,58 +49,68 @@ export class AppointmentCalendarComponent implements OnInit {
     for (let i = 1; i <= numDays; i++) {
       days.push(new Date(year, month, i));
     }
+
     return days;
   }
 
-  isAppointmentDay(date: Date): boolean {
-    return this.appointments_calendar.some(appointment => new Date(appointment.date).toDateString() === date.toDateString());
+  isAppointmentDay(day: Date): boolean {
+    return this.appointments_calendar.some(appointment => {
+      const appointmentDate = this.normalizeDate(new Date(appointment.date));
+      console.log(`Comparing ${appointmentDate} with ${day}`);
+      return appointmentDate.getFullYear() === day.getFullYear() &&
+             appointmentDate.getMonth() === day.getMonth() &&
+             appointmentDate.getDate() === day.getDate()-1;
+    });
   }
 
-  selectDate(date: Date) {
-    this.selectedAppointments = this.appointments_calendar.filter(appointment => new Date(appointment.date).toDateString() === date.toDateString());
+  selectDate(day: Date) {
+    console.log(`Selecting appointments for ${day}`);
+    this.selectedAppointments = this.appointments_calendar.filter(appointment => {
+      const appointmentDate = this.normalizeDate(new Date(appointment.date));
+      console.log(`Comparing ${appointmentDate} with ${day}`);
+      return appointmentDate.getFullYear() === day.getFullYear() &&
+             appointmentDate.getMonth() === day.getMonth() &&
+             appointmentDate.getDate() === day.getDate()-1;
+    });
+    console.log(`Selected appointments:`, this.selectedAppointments);
   }
 
-  changeMonth(event: Event) {
-    const target = event.target as HTMLSelectElement;
-    const [year, month] = target.value.split('-').map(Number);
-    this.currentMonth = new Date(year, month - 1, 1);
-  }
+  goToAppointment(direction: string) {
+    const sortedAppointments = this.appointments_calendar.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
+    const currentIndex = sortedAppointments.findIndex(appointment => {
+      const appointmentDate = this.normalizeDate(new Date(appointment.date));
+      return appointmentDate.getFullYear() === this.currentMonth.getFullYear() &&
+             appointmentDate.getMonth() === this.currentMonth.getMonth() &&
+             appointmentDate.getDate() === this.currentMonth.getDate();
+    });
 
-  goToAppointment(direction: 'previous' | 'next') {
-    const sortedAppointments = this.appointments_calendar
-      .map(appointment => new Date(appointment.date))
-      .sort((a, b) => a.getTime() - b.getTime());
-
-    const currentDate = this.selectedAppointments.length > 0 ? new Date(this.selectedAppointments[0].date) : this.currentMonth;
-    let targetDate: Date | undefined;
-
-    if (direction === 'previous') {
-      targetDate = sortedAppointments.reverse().find(date => date < currentDate);
-    } else {
-      targetDate = sortedAppointments.find(date => date > currentDate);
+    if (direction === 'previous' && currentIndex > 0) {
+      this.currentMonth = this.normalizeDate(new Date(sortedAppointments[currentIndex - 1].date));
+    } else if (direction === 'next' && currentIndex < sortedAppointments.length - 1) {
+      this.currentMonth = this.normalizeDate(new Date(sortedAppointments[currentIndex + 1].date));
     }
 
-    if (targetDate) {
-      this.currentMonth = new Date(targetDate.getFullYear(), targetDate.getMonth(), 1);
-      this.selectedAppointments = this.appointments_calendar.filter(appointment => new Date(appointment.date).toDateString() === targetDate.toDateString());
-    }
+    this.selectDate(this.currentMonth);
   }
 
-  isPreviousDisabled(): boolean {
-    if (this.selectedAppointments.length === 0) return true;
-    const sortedAppointments = this.appointments_calendar
-      .map(appointment => new Date(appointment.date))
-      .sort((a, b) => a.getTime() - b.getTime());
-    const currentDate = new Date(this.selectedAppointments[0].date);
-    return !sortedAppointments.some(date => date < currentDate);
+
+
+  filterAppointments() {
+    const currentYear = this.currentMonth.getFullYear();
+    const currentMonth = this.currentMonth.getMonth();
+
+    this.selectedAppointments = this.appointments_calendar.filter(appointment => {
+      const appointmentDate = new Date(appointment.date);
+      return (
+        appointmentDate.getFullYear() === currentYear &&
+        appointmentDate.getMonth() === currentMonth &&
+        (this.searchTerm === '' || appointment.doctor.toLowerCase().includes(this.searchTerm.toLowerCase())) &&
+        (this.selectedStatus === '' || appointment.status === this.selectedStatus)
+      );
+    });
   }
 
-  isNextDisabled(): boolean {
-    if (this.selectedAppointments.length === 0) return true;
-    const sortedAppointments = this.appointments_calendar
-      .map(appointment => new Date(appointment.date))
-      .sort((a, b) => a.getTime() - b.getTime());
-    const currentDate = new Date(this.selectedAppointments[0].date);
-    return !sortedAppointments.some(date => date > currentDate);
+  normalizeDate(date: Date): Date {
+    return new Date(date.getFullYear(), date.getMonth(), date.getDate());
   }
 }

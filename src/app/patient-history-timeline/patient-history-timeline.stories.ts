@@ -3,7 +3,7 @@ import { PatientHistoryTimelineComponent } from './patient-history-timeline.comp
 import { CommonModule } from '@angular/common';
 
 export default {
-  title: 'Patient UI/PatientHistoryTimeline',
+  title: 'Patient Clinical UI/PatientHistoryTimeline',
   component: PatientHistoryTimelineComponent,
   decorators: [
     moduleMetadata({

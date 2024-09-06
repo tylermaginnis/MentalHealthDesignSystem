@@ -3,7 +3,7 @@ import { PatientAllergyListComponent } from './patient-allergy-list.component';
 import { CommonModule } from '@angular/common';
 
 export default {
-  title: 'Patient UI/PatientAllergyList',
+  title: 'Patient Clinical UI/PatientAllergyList',
   component: PatientAllergyListComponent,
   decorators: [
     moduleMetadata({
