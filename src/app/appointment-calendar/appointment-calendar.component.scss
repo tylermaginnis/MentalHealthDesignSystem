@@ -1,0 +1,65 @@
+.calendar {
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  
+    .calendar-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+  
+      input[type="month"] {
+        font-size: 16px;
+        padding: 5px;
+      }
+    }
+  
+    .calendar-body {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+  
+    .calendar-day {
+      flex: 1 1 calc(14.28% - 10px);
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px;
+      background-color: #f9f9f9;
+      text-align: center;
+      cursor: pointer;
+  
+      &.appointment-day {
+        background-color: lightgreen;
+      }
+    }
+  
+    .calendar-navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+  
+      .btn {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+  
+        &.btn-secondary {
+          background-color: #007bff;
+          color: white;
+        }
+  
+        &:disabled {
+          background-color: #ccc;
+          cursor: not-allowed;
+        }
+      }
+    }
+  
+    .selected-appointments {
+      margin-top: 20px;
+    }
+  }

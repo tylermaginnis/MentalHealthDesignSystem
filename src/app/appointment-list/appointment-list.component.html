@@ -1,0 +1,21 @@
+<div class="appointment-list">
+    <div class="search-filter">
+      <label for="search-input" class="visually-hidden">Search appointments</label>
+      <input id="search-input" type="text" placeholder="Search by doctor..." [(ngModel)]="searchTerm" (input)="filterAppointments()" aria-label="Search appointments" />
+
+      <label for="status-filter" class="visually-hidden">Filter by status</label>
+      <select id="status-filter" [(ngModel)]="selectedStatus" (change)="filterAppointments()" aria-label="Filter by status">
+        <option value="">All Statuses</option>
+        <option value="Scheduled">Scheduled</option>
+        <option value="Completed">Completed</option>
+        <option value="Canceled">Canceled</option>
+      </select>
+    </div>
+
+    <ul id="appointment-list" aria-live="polite">
+      <li *ngIf="filteredAppointments.length === 0">No appointments found</li>
+      <li *ngFor="let appointment of filteredAppointments">
+        <app-appointment-card [appointment]="appointment"></app-appointment-card>
+      </li>
+    </ul>
+  </div>

@@ -1,0 +1,19 @@
+<div class="calendar">
+    <div class="calendar-header">
+      <input type="month" (change)="changeMonth($event)" [value]="currentMonth | date: 'yyyy-MM'" />
+    </div>
+    <div class="calendar-body">
+      <div *ngFor="let day of getDaysInMonth(currentMonth)" class="calendar-day" [ngClass]="{'appointment-day': isAppointmentDay(day)}" (click)="selectDate(day)">
+        <span>{{ day.getDate() }}</span>
+      </div>
+    </div>
+    <div class="calendar-navigation">
+      <button [disabled]="isPreviousDisabled()" (click)="goToAppointment('previous')" class="btn btn-secondary">Previous Appointment</button>
+      <button [disabled]="isNextDisabled()" (click)="goToAppointment('next')" class="btn btn-secondary">Next Appointment</button>
+    </div>
+    <div *ngIf="selectedAppointments.length > 0" class="selected-appointments">
+      <div *ngFor="let appointment of selectedAppointments">
+        <app-appointment-card [appointment]="appointment"></app-appointment-card>
+      </div>
+    </div>
+  </div>
