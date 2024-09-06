@@ -1,0 +1,25 @@
+<div class="patient-list">
+    <a class="skip-link" href="#patient-list">Skip to patient list</a>
+    
+    <div class="search-filter">
+      <label for="search-input" class="visually-hidden">Search patients</label>
+      <input id="search-input" type="text" placeholder="Search patients..." [(ngModel)]="searchTerm" (input)="filterPatients()" aria-label="Search patients" />
+      
+      <label for="gender-filter" class="visually-hidden">Filter by gender</label>
+      <select id="gender-filter" [(ngModel)]="selectedGender" (change)="filterPatients()" aria-label="Filter by gender">
+        <option value="">All Genders</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+        <option value="Non-binary">Non-binary</option>
+        <option value="Prefer not to say">Prefer not to say</option>
+      </select>
+    </div>
+    
+    <ul id="patient-list" aria-live="polite">
+      <li *ngIf="filteredPatients.length === 0">No patients found</li>
+      <li *ngFor="let patient of filteredPatients">
+        <app-patient-profile-card [patient]="patient"></app-patient-profile-card>
+      </li>
+    </ul>
+  </div>

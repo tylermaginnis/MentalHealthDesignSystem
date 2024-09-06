@@ -1,0 +1,45 @@
+.timeline {
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 16px auto;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  
+    h3 {
+      font-size: 1.2em;
+      margin-bottom: 16px;
+    }
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+  
+      li {
+        display: flex;
+        margin-bottom: 16px;
+  
+        .timeline-date {
+          flex: 0 0 100px;
+          font-weight: bold;
+        }
+  
+        .timeline-event {
+          flex: 1;
+          padding-left: 16px;
+          border-left: 2px solid #1ea7fd;
+  
+          strong {
+            display: block;
+            margin-bottom: 8px;
+          }
+  
+          p {
+            margin: 0;
+          }
+        }
+      }
+    }
+  }

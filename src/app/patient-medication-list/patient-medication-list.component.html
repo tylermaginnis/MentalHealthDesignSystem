@@ -1,0 +1,20 @@
+<div class="medication-list">
+    <h3>Patient Medication List</h3>
+    <ul>
+      <li *ngFor="let medication of medications">
+        <div class="medication-name"><strong>{{ medication.name }}</strong></div>
+        <div class="medication-details">
+          <p><strong>Dosage:</strong> {{ medication.dosage }}</p>
+          <p><strong>Frequency:</strong> {{ medication.frequency }}</p>
+          <p><strong>Prescribed By:</strong> {{ medication.prescribedBy }}</p>
+        </div>
+        <div class="medication-actions">
+          <button (click)="refillMedication(medication)">Refill</button>
+          <button (click)="discontinueMedication(medication)">Discontinue</button>
+          <button (click)="adjustDosage(medication)">Adjust Dosage</button>
+          <button (click)="addNoteToMedication(medication)">Add Note</button>
+          <button (click)="setReminderForMedication(medication)">Set Reminder</button>
+        </div>
+      </li>
+    </ul>
+  </div>

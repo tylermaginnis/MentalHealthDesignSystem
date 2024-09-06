@@ -1,0 +1,23 @@
+<div class="patient-profile-card" role="region" aria-labelledby="patient-profile-heading">
+    <h2 id="patient-profile-heading">{{ patient.name }}</h2>
+    <div class="patient-details">
+      <div class="patient-details__label"><strong>Age:</strong></div>
+      <div class="patient-details__value">{{ patient.age }}</div>
+      <div class="patient-details__label"><strong>Gender:</strong></div>
+      <div class="patient-details__value">{{ patient.gender }}</div>
+      <div class="patient-details__label"><strong>Contact:</strong></div>
+      <div class="patient-details__value"><a href="tel:{{ patient.contact }}">{{ patient.contact }}</a></div>
+      <div class="patient-details__label"><strong>Address:</strong></div>
+      <div class="patient-details__value">{{ patient.address }}</div>
+      <div class="patient-details__label"><strong>Mental Health Conditions:</strong></div>
+      <div class="patient-details__value">{{ patient.conditions }}</div>
+      <div class="patient-details__label"><strong>Treatment Plan:</strong></div>
+      <div class="patient-details__value">{{ patient.treatmentPlan }}</div>
+      <div class="patient-details__label"><strong>Healthcare Provider:</strong></div>
+      <div class="patient-details__value">{{ patient.provider }}</div>
+    </div>
+    <div class="button-group">
+      <button class="btn btn-primary" (click)="viewPatient()">View</button>
+      <button class="btn btn-secondary" (click)="archivePatient()">Archive</button>
+    </div>
+  </div>

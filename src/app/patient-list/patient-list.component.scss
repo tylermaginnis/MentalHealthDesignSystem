@@ -1,0 +1,76 @@
+.patient-list {
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: #1ea7fd;
+      color: white;
+      padding: 8px;
+      z-index: 100;
+      transition: top 0.3s;
+    }
+  
+    .skip-link:focus {
+      top: 0;
+    }
+  
+    .search-filter {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+  
+      input, select {
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 14px;
+        outline: none;
+  
+        &:focus {
+          border-color: #1ea7fd;
+          box-shadow: 0 0 0 3px rgba(30, 167, 253, 0.25);
+        }
+      }
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+  
+      li {
+        padding: 8px;
+        border-bottom: 1px solid #ccc;
+  
+        .patient-card {
+          padding: 16px;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          background-color: #fff;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+          h3 {
+            margin-top: 0;
+          }
+  
+          p {
+            margin: 4px 0;
+          }
+        }
+      }
+    }
+  }
+  
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+  }

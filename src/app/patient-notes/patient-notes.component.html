@@ -1,0 +1,25 @@
+<div class="patient-notes">
+    <h3>Patient Notes</h3>
+    <input type="text" [(ngModel)]="searchQuery" placeholder="Search notes..." />
+    <ul>
+      <li *ngFor="let note of filterNotes()">
+        <strong>{{ note.date }} by {{ note.author }}:</strong>
+        <div contenteditable="true" (blur)="editNoteContent(note, $event.target.innerText)">{{ note.content }}</div>
+        <div *ngIf="note.tags.length">
+          <strong>Tags:</strong> {{ note.tags.join(', ') }}
+        </div>
+        <div *ngIf="note.attachments.length">
+          <strong>Attachments:</strong>
+          <ul>
+            <li *ngFor="let attachment of note.attachments">{{ attachment }}</li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <div class="add-note">
+      <textarea [(ngModel)]="newNoteContent" placeholder="Add a new note..."></textarea>
+      <input type="text" [(ngModel)]="newNoteTags" placeholder="Add tags, separated by commas" />
+      <input type="file" (change)="handleFileInput($event.target.files)" multiple />
+      <button (click)="addNote()">Add Note</button>
+    </div>
+  </div>

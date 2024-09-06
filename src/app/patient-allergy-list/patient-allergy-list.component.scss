@@ -1,0 +1,39 @@
+.allergy-list {
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 16px auto;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  
+    h3 {
+      font-size: 1.2em;
+      margin-bottom: 16px;
+    }
+  
+    ul {
+      list-style-type: none;
+      padding: 0;
+  
+      li {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 16px;
+  
+        .allergy-name {
+          font-weight: bold;
+          margin-bottom: 8px;
+        }
+  
+        .allergy-details {
+          padding-left: 16px;
+  
+          p {
+            margin: 4px 0;
+          }
+        }
+      }
+    }
+  }

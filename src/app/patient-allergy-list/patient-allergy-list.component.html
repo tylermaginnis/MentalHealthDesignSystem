@@ -1,0 +1,12 @@
+<div class="allergy-list">
+    <h3>Patient Allergy List</h3>
+    <ul>
+      <li *ngFor="let allergy of allergies">
+        <div class="allergy-name"><strong>{{ allergy.name }}</strong></div>
+        <div class="allergy-details">
+          <p><strong>Reaction:</strong> {{ allergy.reaction }}</p>
+          <p><strong>Severity:</strong> {{ allergy.severity }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
