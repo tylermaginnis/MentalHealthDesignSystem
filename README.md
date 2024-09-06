@@ -1,4 +1,4 @@
-# MentalHealthDesignSystem
+# Mental Health Design System
 
 ## Overview
 
