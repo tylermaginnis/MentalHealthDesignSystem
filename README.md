@@ -1,27 +1,18 @@
 # MentalHealthDesignSystem
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.3.
+## Overview
 
-## Development server
+MentalHealthDesignSystem is a comprehensive UI component library designed specifically for mental health applications. This project leverages the power of Angular and Storybook to create reusable, testable, and visually appealing components that enhance the user experience for both patients and healthcare providers.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Key Features
 
-## Code scaffolding
+- **Angular CLI**: Built with Angular CLI version 18.2.3, ensuring a robust and scalable architecture.
+- **Storybook Integration**: Develop and test UI components in isolation with Storybook, making it easier to create and document components.
+- **Responsive Design**: Components are designed to be fully responsive, providing a seamless experience across different devices and screen sizes.
+- **Customizable**: Easily customizable components to match the specific needs and branding of your mental health application.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Storybook
 
-## Build
+Storybook is a tool for developing UI components in isolation for Angular projects. It allows you to create and showcase components independently, making it easier to develop, test, and document them. 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+To start Storybook, run `npm run storybook`. This will launch the Storybook server and open a new tab in your browser at `http://localhost:6006/`, where you can view and interact with your components.
